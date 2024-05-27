@@ -26,7 +26,7 @@ Route::get('/registrousuario', [InicioDeSesionController::class, 'mostrarFormula
 Route::get('/registrofotografo', [InicioDeSesionController::class, 'mostrarFormularioFotografo'])->name('InicioDeSesion.registroFotografo');
 
 //pagina de cliente
-Route::post('/pagina-clientes', [PaginaClientesController::class, 'pagina'])->name('PaginaClientes.Pagina');
+Route::post('/pagina-clientes', [PaginaClientesController::class, 'pagina'])->name('PaginaClientes.P agina');
 
 
 //pagina de fotografo
