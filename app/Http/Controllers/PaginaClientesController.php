@@ -11,4 +11,18 @@ class PaginaClientesController extends Controller
         // Aquí colocarías la lógica para mostrar la página de clientes
         return view('PaginaClientes.pagina');
     }
+
+    public function inicio()
+    {
+        // Aquí colocarías la lógica para mostrar la página de clientes
+        return view('PaginaClientes.inicio');
+    }
+
+    public function fotografos()
+    {
+        // Aquí colocarías la lógica para mostrar la página de clientes
+        return view('PaginaClientes.fotografos');
+    }
 }
+
+
