@@ -24,22 +24,16 @@ Route::get('/registrofotografo', [InicioDeSesionController::class, 'mostrarFormu
 
 // Rutas para la página de clientes
 Route::post('/pagina-clientes', [PaginaClientesController::class, 'pagina'])->name('PaginaClientes.Pagina');
-<<<<<<< HEAD
 Route::get('/fotografos', [PaginaClientesController::class, 'fotografos'])->name('PaginaClientes.fotografos');
 Route::get('/categorias', [PaginaClientesController::class, 'categorias'])->name('PaginaClientes.categorias');
 Route::get('/contacto', [PaginaClientesController::class, 'contacto'])->name('PaginaClientes.contacto');
-=======
-Route::post('/pagina-inicio', [PaginaClientesController::class, 'inicio'])->name('PaginaClientes.inicio');
-Route::post('/pagina-fotografos', [PaginaClientesController::class, 'inicio'])->name('PaginaClientes.fotografos');
->>>>>>> b923067b14f522fcdf62a9f2c89624dc4a293161
-
 
 // Rutas para la página de fotógrafos
 Route::post('/fotografo', [PaginaFotografosController::class, 'index'])->name('PaginaFotografos.index');
 Route::post('/pagina-fotografo', [PaginaFotografosController::class, 'PaginaFotografo'])->name('PaginaFotografos.PaginaFotografo');
 
 // Rutas para la página de administradores
-Route::post('/administrador', [PaginaAdministradorController::class, 'index'])->name('PaginaAdministrador.index');
-Route::post('/pagina-administrador', [PaginaAdministradorController::class, 'PaginaAdministrador'])->name('PaginaAdministrador.bienvenida');
-Route::post('/cliente', [PaginaAdministradorController::class, 'Cliente'])->name('PaginaAdministrador.crudcliente');
+Route::get('/administrador', [PaginaAdministradorController::class, 'index'])->name('PaginaAdministrador.index');
+Route::get('/pagina-administrador', [PaginaAdministradorController::class, 'PaginaAdministrador'])->name('PaginaAdministrador.bienvenida');
+Route::get('/cliente', [PaginaAdministradorController::class, 'Cliente'])->name('PaginaAdministrador.crudcliente');
 Route::get('/Fotografo', [PaginaAdministradorController::class, 'Fotografo'])->name('PaginaAdministrador.pagadministrador');

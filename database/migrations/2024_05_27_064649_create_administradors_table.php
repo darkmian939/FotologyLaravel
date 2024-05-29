@@ -11,97 +11,106 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // Crear la tabla Fotografias
-        Schema::create('fotografias', function (Blueprint $table) {
-            $table->string('IDfotografia', 15)->primary();
-            $table->string('Titulo', 50);
-            $table->text('Descripcion');
-            $table->string('IDcategoria', 15);
-            $table->integer('IDfotografo');
-            $table->integer('IDcalificacion');
+        // Tabla Administrador
+        Schema::create('administrador', function (Blueprint $table) {
+            $table->bigIncrements('IDadministrador');
+            $table->string('Email', 50);
+            $table->string('password', 20);
             $table->timestamps();
         });
 
-        // Crear la tabla Fotografos
+        // Tabla Cliente
+        Schema::create('clientes', function (Blueprint $table) {
+            $table->string('IDcliente', 30)->primary();
+            $table->string('email', 180)->unique();
+            $table->string('nameUser', 180);
+            $table->string('username', 90)->unique();
+            $table->string('phone', 15);
+            $table->string('document', 50)->unique();
+            $table->date('birthday');
+            $table->string('image', 255)->nullable();
+            $table->string('password', 90);
+            $table->timestamps();
+        });
+
+        // Tabla Fotografo
         Schema::create('fotografos', function (Blueprint $table) {
-            $table->increments('IDfotografo');
-            $table->string('Nombre_fotografo', 50);
-            $table->string('Foto_de_perfil', 255);
-            $table->text('Descripcion');
-            $table->string('Email', 30);
-            $table->string('Contrasena', 20);
-            $table->string('Direccion', 50);
-            $table->string('Telefono', 30);
-            $table->string('Portafolio', 50);
+            $table->bigIncrements('IDfotografo');
+            $table->string('email', 180)->unique();
+            $table->string('nameUser', 180);
+            $table->string('username', 90)->unique();
+            $table->string('phone', 15);
+            $table->string('adress', 90);
+            $table->date('birthday');
+            $table->string('image', 255);
+            $table->text('description');
+            $table->string('password', 90);
+            $table->string('facebook', 90);
+            $table->string('instagram', 90);
             $table->timestamps();
         });
 
-        // Crear la tabla Portafolios
+        // Tabla Portafolio
         Schema::create('portafolios', function (Blueprint $table) {
             $table->string('IDportafolio', 15)->primary();
-            $table->integer('IDfotografo');
+            $table->unsignedBigInteger('IDfotografo');
             $table->string('Nombre_portafolio', 30);
             $table->timestamps();
         });
 
-        // Crear la tabla Administradores
-        Schema::create('administradores', function (Blueprint $table) {
-            $table->bigIncrements('IDadministrador');
-            $table->string('Email', 50);
-            $table->string('Contrasena', 20);
+        // Tabla Fotografia
+        Schema::create('fotografias', function (Blueprint $table) {
+            $table->string('IDfotografia', 15)->primary();
+            $table->string('title', 50);
+            $table->text('description');
+            $table->string('IDcategoria', 15);
+            $table->unsignedBigInteger('IDfotografo');
             $table->timestamps();
         });
 
-        // Crear la tabla Calificaciones
-        Schema::create('calificaciones', function (Blueprint $table) {
-            $table->increments('IDcalificacion');
-            $table->integer('ValorCalificacion');
-            $table->string('IDfotografia', 15);
-            $table->timestamps();
-        });
-
-        // Crear la tabla Categorias
+        // Tabla Categorias
         Schema::create('categorias', function (Blueprint $table) {
             $table->string('IDcategoria', 20)->primary();
-            $table->string('Nombre', 20);
-            $table->text('Descripcion');
-            $table->string('IDportafolio', 15);
+            $table->string('nameCategorie', 20);
             $table->timestamps();
         });
 
-        // Crear la tabla Clientes
-        Schema::create('clientes', function (Blueprint $table) {
-            $table->string('IDcliente', 30)->primary();
-            $table->string('Nombre_cliente', 50);
-            $table->string('Email', 50);
-            $table->string('Contrasena', 20);
-            $table->bigInteger('Telefono');
-            $table->string('Foto_de_perfil', 255); // Nueva columna para la foto de perfil
+        // Tabla Calificacion
+        Schema::create('calificacions', function (Blueprint $table) {
+            $table->bigIncrements('IDcalificacion');
+            $table->integer('calification');
+            $table->unsignedBigInteger('IDfotografo');
+            $table->text('coment');
             $table->timestamps();
         });
 
-        // Crear la tabla Comentarios
-        Schema::create('comentarios', function (Blueprint $table) {
-            $table->increments('IDcomentario');
-            $table->string('IDfotografia', 15);
-            $table->string('IDcliente', 30);
-            $table->dateTime('Fecha_comentario');
+        Schema::create('contactofotografos', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nombre', 100);
+            $table->string('gmail', 100);
+            $table->text('mensaje');
+            $table->timestamps();
+        });
+
+        Schema::create('contactoclientes', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nombre', 100);
+            $table->string('gmail', 100);
+            $table->text('mensaje');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
+        Schema::dropIfExists('calificacions');
         Schema::dropIfExists('fotografias');
-        Schema::dropIfExists('fotografos');
         Schema::dropIfExists('portafolios');
-        Schema::dropIfExists('administradores');
-        Schema::dropIfExists('calificaciones');
         Schema::dropIfExists('categorias');
+        Schema::dropIfExists('fotografos');
         Schema::dropIfExists('clientes');
-        Schema::dropIfExists('comentarios');
+        Schema::dropIfExists('administrador');
+        Schema::dropIfExists('contactofotografos');
+        Schema::dropIfExists('contactoclientes');
     }
 };
