@@ -9,6 +9,9 @@
 </head>
 <body>
     <header class="header">
+    <div class="logo">
+        <img src="Recursos/LOGOA.png" alt="Logo" />
+      </div>
         <div class="perfil-btn">
             <form id="perfilForm" method="GET" action="{{ route('perfil.usuario') }}">
                 <input type="hidden" name="usuario_id" value="{{ Auth::id() }}">
@@ -17,9 +20,13 @@
         </div>
         <nav>
             <ul class="linksnav">
+<<<<<<< HEAD
                 <li><a href="{{ route('PaginaClientes.pagina') }}">Inicio</a></li>
                 <li><a href="{{ route('PaginaClientes.fotografos') }}">Fotografos</a></li>
                 <li><a href="{{ route('PaginaClientes.categorias') }}">Categorías</a></li>
+=======
+                <li><a href="{{ route('PaginaClientes.fotografos') }}">Fotografos</a></li>
+>>>>>>> b923067b14f522fcdf62a9f2c89624dc4a293161
                 <li><a href="{{ route('PaginaClientes.contacto') }}">Contacto</a></li>
             </ul>
         </nav>
@@ -30,7 +37,7 @@
       <h2>Destacados</h2>
     </div>
     <div class="contenedor">
-      <img class="imagen" src="{{ asset('Recursos/Paisaje1.jpg') }}" alt="Paisaje" />
+      <img class="imagen" src="Recursos/Paisaje1.jpg" alt="Paisaje" />
       <div class="texto">
         <h1 class="nombre">Erick Ricaurte</h1>
         <p>

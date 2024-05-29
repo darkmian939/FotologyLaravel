@@ -24,9 +24,14 @@ Route::get('/registrofotografo', [InicioDeSesionController::class, 'mostrarFormu
 
 // Rutas para la página de clientes
 Route::post('/pagina-clientes', [PaginaClientesController::class, 'pagina'])->name('PaginaClientes.Pagina');
+<<<<<<< HEAD
 Route::get('/fotografos', [PaginaClientesController::class, 'fotografos'])->name('PaginaClientes.fotografos');
 Route::get('/categorias', [PaginaClientesController::class, 'categorias'])->name('PaginaClientes.categorias');
 Route::get('/contacto', [PaginaClientesController::class, 'contacto'])->name('PaginaClientes.contacto');
+=======
+Route::post('/pagina-inicio', [PaginaClientesController::class, 'inicio'])->name('PaginaClientes.inicio');
+Route::post('/pagina-fotografos', [PaginaClientesController::class, 'inicio'])->name('PaginaClientes.fotografos');
+>>>>>>> b923067b14f522fcdf62a9f2c89624dc4a293161
 
 
 // Rutas para la página de fotógrafos
