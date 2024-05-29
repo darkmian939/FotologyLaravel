@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <style>
         .eliminar-btn {
             background-color: red;
@@ -88,107 +89,65 @@
             background-color: #f2f2f2;
         }
     </style>
-    
+    <link rel="stylesheet" href="css/Administrador css/styleadministrador.css"> <!-- Ajusta la ruta según tu estructura de carpetas y configuración de contenido estático -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/646ac4fad6.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styleadministrador.css">
     <title>Panel de Administrador</title>
 </head>
 <body>
-<script>
-    function eliminar() {
-        var respuesta = confirm("¿Estas seguro que deseas eliminar este registro?");
-        return respuesta;
-    }
+    <script src="{{ asset('js/dropdown.js') }}"></script>
 
-    function toggleNotificationDropdown() {
-        document.getElementById('notificationDropdown').classList.toggle('active');
-    }
-</script>
-<header class="header">
-    <div class="logo">
-        <img src="../Recursos/LOGOA.png" alt="Logo" />
-    </div>
-    <div class="notifications">
-        <button class="notification-btn" onclick="toggleNotificationDropdown()">
-            <i class="fas fa-bell notification-icon"></i> <!-- Ícono de notificación -->
-            <span class="badge">3</span> <!-- Número de notificaciones pendientes -->
-        </button>
-        <div class="notification-dropdown" id="notificationDropdown">
-            <div class="notification-dropdown-header">
-                <h3>Notificaciones</h3>
-            </div>
-            <ul class="notification-dropdown-list">
-                <li class="notification-dropdown-item">Notificación 1</li>
-                <li class="notification-dropdown-item">Notificación 2</li>
-                <li class="notification-dropdown-item">Notificación 3</li>
-            </ul>
+    <header class="header">
+        <div class="logo">
+            <img src="{{ asset('Recursos/LOGOA.png') }}" alt="Logo" /> <!-- Ajusta la ruta según tu estructura de carpetas y configuración de contenido estático -->
         </div>
+        <nav>
+            <ul class="linksnav">
+            <li><a href="{{ route('PaginaAdministrador.bienvenida') }}">Inicio</a></li>
+            </ul>
+        </nav>
+        <a class="btn" href="{{ route('IniciarSesionAdministrador') }}">
+            <button>Cerrar Sesión</button>
+        </a>
+    </header>
+
+    <div class="container">
+        <h1>Panel de Administrador</h1>
+        <button class="filter-btn" onclick="filterData('Fotografos')">Fotografos</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre del fotografo</th>
+                    <th>Email</th>
+                    <th>Contraseña</th>
+                    <th>Direccion</th>
+                    <th>Telefono</th>
+                    <th>Acción</th> <!-- Nueva columna para el botón de eliminación -->
+                </tr>
+            </thead>
+            <tbody>
+                
+                    <tr>
+                        <td>{{ $fotografo->IDfotografo }}</td>
+                        <td>{{ $fotografo->Nombre_fotografo }}</td>
+                        <td>{{ $fotografo->Email }}</td>
+                        <td>{{ $fotografo->Contraseña }}</td>
+                        <td>{{ $fotografo->Direccion }}</td>
+                        <td>{{ $fotografo->Telefono }}</td>
+                        <td>
+                            <!-- Formulario para enviar la solicitud de eliminación -->
+                            <form method="post" action="{{ route('EliminarFotografo') }}"> <!-- Ajusta el nombre de la ruta según tu configuración -->
+                                
+                                <input type="hidden" name="eliminar_id" value="{{ $fotografo->IDfotografo }}" />
+                                <button type="submit" class="eliminar-btn">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                
+            </tbody>
+        </table>
     </div>
-    <a class="btn" href="../InicioDeSesion/index.php">
-        <button>Cerrar Sesión</button>
-    </a>
-</header>
-
-<div class="container">
-    <h1>Panel de Administrador</h1>
-    <button class="filter-btn" onclick="filterData('Fotografos')">Fotografos</button>
-    <button class="filter-btn" onclick="filterData('Clientes')"><a href="crudcliente.php">Clientes</a></button>
-    <table>
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nombre del fotografo</th>
-            <th>Email</th>
-            <th>Contraseña</th>
-            <th>Direccion</th>
-            <th>Telefono</th>
-            <th>Acción</th> <!-- Nueva columna para el botón de eliminación -->
-        </tr>
-        </thead>
-        <tbody>
-        <?php
-        include "../InicioDeSesion/conexion.php";
-        $sql = $conexion->query("SELECT * from fotografo ");
-        while ($datos = $sql->fetch_object()) { ?>
-            <tr>
-                <td><?= $datos->IDfotografo ?></td>
-                <td><?= $datos->Nombre_fotografo ?></td>
-                <td><?= $datos->Email ?></td>
-                <td><?= $datos->Contrasena ?></td>
-                <td><?= $datos->Direccion ?></td>
-                <td><?= $datos->Telefono ?></td>
-                <td>
-                    <!-- Formulario para enviar la solicitud de eliminación -->
-                    <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                        <input type="hidden" name="eliminar_id" value="<?= $datos->IDfotografo ?>">
-                        <button type="submit" onclick="return eliminar()" class="eliminar-btn">Eliminar</button>
-                    </form>
-                </td>
-            </tr>
-        <?php } ?>
-        </tbody>
-    </table>
-</div>
-
-<?php
-// Manejar la eliminación del registro si se envía un formulario
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['eliminar_id'])) {
-    $eliminar_id = $_POST['eliminar_id'];
-
-    // Consulta SQL para eliminar el registro
-    $sql = "DELETE FROM fotografo WHERE IDfotografo = $eliminar_id";
-
-    if ($conexion->query($sql) === TRUE) {
-        echo "Registro eliminado correctamente.";
-    } else {
-        echo "Error al eliminar el registro: " . $conexion->error;
-    }
-}
-
-// Cerrar la conexión a la base de datos
-$conexion->close();
-?>
 
 </body>
 </html>

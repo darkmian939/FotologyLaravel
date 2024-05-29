@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Principal</title>
-    <link rel="stylesheet" href="{{ asset('css/Cliente css/stylepagprincipal.css') }}">
+    <link rel="stylesheet" href="css/Cliente css/stylepagprincipal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
@@ -17,10 +17,10 @@
         </div>
         <nav>
             <ul class="linksnav">
-                <li><a href="{{ route('pagina.inicio') }}">Inicio</a></li>
-                <li><a href="{{ route('pagina.fotografos') }}">Fotografos</a></li>
-                <li><a href="{{ route('pagina.categorias') }}">Categorías</a></li>
-                <li><a href="{{ route('pagina.contacto') }}">Contacto</a></li>
+                <li><a href="{{ route('PaginaClientes.pagina') }}">Inicio</a></li>
+                <li><a href="{{ route('PaginaClientes.fotografos') }}">Fotografos</a></li>
+                <li><a href="{{ route('PaginaClientes.categorias') }}">Categorías</a></li>
+                <li><a href="{{ route('PaginaClientes.contacto') }}">Contacto</a></li>
             </ul>
         </nav>
         <a class="btn" href="{{ route('usuario.cerrar_sesion') }}"><button>Cerrar Sesion</button></a>

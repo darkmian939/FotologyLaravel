@@ -8,17 +8,22 @@ class InicioDeSesionController extends Controller
 {
     public function usuario()
     {
-        return view('InicioDeSesion.usuario');
+        return view('InicioDeSesion.Usuario');
     }
 
     public function fotografo()
     {
-        return view('InicioDeSesion.fotografo');
+        return view('InicioDeSesion.Fotografo');
     }
 
     public function administrador()
     {
-        return view('InicioDeSesion.administrador');
+        return view('InicioDeSesion.Administrador');
+    }
+
+    public function recuperar()
+    {
+        return view('InicioDeSesion.Recuperar');
     }
 
     public function mostrarFormularioRegistro()
@@ -29,20 +34,5 @@ class InicioDeSesionController extends Controller
     public function mostrarFormularioFotografo()
     {
         return view('InicioDeSesion.registrofotografo');
-    }
-
-    public function iniciarSesionComoUsuario()
-    {
-        // Lógica para iniciar sesión como usuario
-    }
-
-    public function iniciarSesionComoFotografo()
-    {
-        // Lógica para iniciar sesión como fotógrafo
-    }
-
-    public function iniciarSesionComoAdministrador()
-    {
-        // Lógica para iniciar sesión como administrador
     }
 }
