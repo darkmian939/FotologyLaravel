@@ -97,14 +97,14 @@
 <body>
     <header class="header">
         <div class="logo">
-            <img src="{{ asset('Recursos/LOGOA.png') }}" alt="Logo" /> <!-- Ajusta la ruta según tu estructura de carpetas y configuración de contenido estático -->
+            <img src="Recursos/LOGOA.png" alt="Logo" /> <!-- Ajusta la ruta según tu estructura de carpetas y configuración de contenido estático -->
         </div>
         <nav>
             <ul class="linksnav">
-            <li><a action="{{ route('PaginaAdministrador.bienvenida') }}">Inicio</a></li>
+            <li><a href="<?php echo route('PaginaAdministrador.bienvenida'); ?>" >Inicio</a></li>
             </ul>
         </nav>
-        <a class="btn" href="{{ route('IniciarSesionAdministrador') }}">
+        <a class="btn" href="<?php echo route('InicioDeSesion.Administrador'); ?>">
             <button>Cerrar Sesión</button>
         </a>
     </header>

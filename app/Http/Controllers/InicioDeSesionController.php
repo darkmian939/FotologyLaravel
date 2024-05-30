@@ -18,7 +18,7 @@ class InicioDeSesionController extends Controller
 
     public function administrador()
     {
-        return view('InicioDeSesion.Administrador');
+        return view('InicioDeSesion.administrador');
     }
 
     public function recuperar()

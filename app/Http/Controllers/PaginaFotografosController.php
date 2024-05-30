@@ -11,7 +11,7 @@ class PaginaFotografosController extends Controller
         return view('PaginaFotografos.Index');
     }
 
-    public function PaginaFotografo()
+    public function PaginaFotografo(Request $request)
     {
         return view('PaginaFotografos.PaginaFotografo');
     }
@@ -21,5 +21,3 @@ class PaginaFotografosController extends Controller
         return view('RegistroFotografo');
     }
 }
-
-

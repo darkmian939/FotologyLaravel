@@ -20,17 +20,13 @@
         </div>
         <nav>
             <ul class="linksnav">
-<<<<<<< HEAD
-                <li><a href="{{ route('PaginaClientes.pagina') }}">Inicio</a></li>
-                <li><a href="{{ route('PaginaClientes.fotografos') }}">Fotografos</a></li>
-                <li><a href="{{ route('PaginaClientes.categorias') }}">Categorías</a></li>
-=======
-                <li><a href="{{ route('PaginaClientes.fotografos') }}">Fotografos</a></li>
->>>>>>> b923067b14f522fcdf62a9f2c89624dc4a293161
-                <li><a href="{{ route('PaginaClientes.contacto') }}">Contacto</a></li>
+                <li><a href="<?php echo route('PaginaClientes.pagina'); ?>">Inicio</a></li>
+                <li><a href="<?php echo route('PaginaClientes.fotografos'); ?>">Fotografos</a></li>
+                <li><a href="<?php echo route('PaginaClientes.categorias'); ?>">Categorías</a></li>
+                <li><a href="<?php echo route('PaginaClientes.contacto'); ?>">Contacto</a></li>
             </ul>
         </nav>
-        <a class="btn" href="{{ route('usuario.cerrar_sesion') }}"><button>Cerrar Sesion</button></a>
+        <a class="btn" href="<?php echo route('InicioDeSesion.usuario'); ?>"><button>Cerrar Sesion</button></a>
     </header>
     <div class="fdestacados">
       <h1>Fotografos</h1>

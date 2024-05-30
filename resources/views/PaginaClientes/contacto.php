@@ -4,21 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulario de Contacto</title>
-    <link rel="stylesheet" href="stylecontacto.css" />
+    <link rel="stylesheet" href="css/Cliente css/stylecontacto.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="logo">
-        <img src="../Recursos/LOGOA.png" alt="Logo" />
-      </div>
-      <nav>
+  <header class="header">
+        <div class="logo">
+            <img src="Recursos/LOGOA.png" alt="Logo" />
+        </div>
+        <nav>
         <ul class="linksnav">
-          <li><a href="pagina.php">Inicio</a></li>
-          <li><a href="fotografos.html">Fotografos</a></li>
-          <li><a href="categorias.html">Categorias</a></li>
-        </ul>
-      </nav>
-      <a class="btn" href="../InicioDeSesion/Usuario.php"><button>Cerrar Sesion</button></a>
+                <li><a href="<?php echo route('PaginaClientes.pagina'); ?>">Inicio</a></li>
+                <li><a href="<?php echo route('PaginaClientes.fotografos'); ?>">Fotografos</a></li>
+                <li><a href="<?php echo route('PaginaClientes.categorias'); ?>">Categorías</a></li>
+                <li><a href="<?php echo route('PaginaClientes.contacto'); ?>">Contacto</a></li>
+            </ul>
+          </nav>
+          <a class="btn" href="../InicioDeSesion/Usuario.php"><button>Cerrar Sesion</button></a>
+        </nav>
     </header>
 
     <div class="formulario">

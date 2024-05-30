@@ -10,7 +10,7 @@
     <div class="logo">
         <img src="../Recursos/LOGOA.png" alt="Logo" />
     </div>
-    <a class="btn" href="{{ route('IniciarSesionAdministrador') }}">
+    <a class="btn" href="<?php echo route('InicioDeSesion.Administrador'); ?>">
             <button>Cerrar Sesión</button>
         </a>
 </header>

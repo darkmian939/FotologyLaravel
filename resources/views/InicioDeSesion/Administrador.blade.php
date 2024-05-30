@@ -31,7 +31,7 @@
         </div>
         <input type="submit" value="Iniciar Sesión" class="btn">
     </form>
-    <p>¿Quieres iniciar sesión como <a href="{{ route('InicioDeSesion.usuario') }}">Usuario</a> o <a href="{{ route('InicioDeSesion.fotografo') }}">Fotografo</a>?</p>
+    <p>¿Quieres iniciar sesión como <a href="<?php echo route('InicioDeSesion.usuario'); ?>">Usuario</a> o <a href="<?php echo route('PaginaFotografos.index'); ?>">Fotografo</a>?</p>
     <a href="{{ route('InicioDeSesion.recuperar') }}" class="olvido">Olvidó la Contraseña</a>
 </div>
 <script src="{{ asset('script.js') }}"></script>

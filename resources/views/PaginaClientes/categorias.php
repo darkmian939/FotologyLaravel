@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Categorías de Fotografías</title>
-    <link rel="stylesheet" href="../PaginaClientes/stylecategorias.css" />
+    <link rel="stylesheet" href="css/Cliente css/stylecategorias.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,23 +17,22 @@
     ></script>
   </head>
   <body>
-    <script src="~/js/dropdown.js"></script>
+    <script src="js/dropdown.js"></script>
 
     <header class="header">
-      <div class="logo">
-        <img src="../Recursos/LOGOA.png" alt="Logo" />
-      </div>
-      <nav>
+        <div class="logo">
+            <img src="Recursos/LOGOA.png" alt="Logo" />
+        </div>
+        <nav>
         <ul class="linksnav">
-          <li><a href="pagina.php">Inicio</a></li>
-          <li><a href="fotografos.html">Fotografos</a></li>
-          <li><a href="categorias.html">Categorias</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-      <a class="btn" href="../InicioDeSesion/Usuario.php"
-        ><button>Cerrar Sesion</button></a
-      >
+                <li><a href="<?php echo route('PaginaClientes.pagina'); ?>">Inicio</a></li>
+                <li><a href="<?php echo route('PaginaClientes.fotografos'); ?>">Fotografos</a></li>
+                <li><a href="<?php echo route('PaginaClientes.categorias'); ?>">Categorías</a></li>
+                <li><a href="<?php echo route('PaginaClientes.contacto'); ?>">Contacto</a></li>
+            </ul>
+          </nav>
+          <a class="btn" href="../InicioDeSesion/Usuario.php"><button>Cerrar Sesion</button></a>
+        </nav>
     </header>
 
     <h1>Categorias</h1>

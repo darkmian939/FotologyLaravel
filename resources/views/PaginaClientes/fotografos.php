@@ -5,29 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PagPrincipal</title>
-    <link rel="stylesheet" href="../PaginaClientes/Fotografos.css" />
-    <link rel="stylesheet" href="../PaginaClientes/starability.css"> <!-- Incluir archivo CSS personalizado -->
-    <link rel="icon" href="../Recursos/LOGOA.png" />
+    <link rel="stylesheet" href="css/Cliente css/Fotografos.css" />
+    <link rel="icon" href="Recursos/LOGOA.png" />
     <script src="https://kit.fontawesome.com/9bf48cfb4e.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/646ac4fad6.js" crossorigin="anonymous"></script>
-    <!-- Incluir archivos de Starability -->
-    <script src="../js/starability.min.js"></script>
 </head>
 <body>
-    <script src="../js/dropdown.js"></script>
+    <script src="js/dropdown.js"></script>
 
     <header class="header">
         <div class="logo">
-            <img src="../Recursos/LOGOA.png" alt="Logo" />
+            <img src="Recursos/LOGOA.png" alt="Logo" />
         </div>
         <nav>
-          <ul class="linksnav">
-            <li><a href="pagina.php">Inicio</a></li>
-            <li><a href="fotografos.html">Fotografos</a></li>
-
-            <li><a href="categorias.html">Categorias</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+        <ul class="linksnav">
+                <li><a href="<?php echo route('PaginaClientes.pagina'); ?>">Inicio</a></li>
+                <li><a href="<?php echo route('PaginaClientes.fotografos'); ?>">Fotografos</a></li>
+                <li><a href="<?php echo route('PaginaClientes.categorias'); ?>">Categorías</a></li>
+                <li><a href="<?php echo route('PaginaClientes.contacto'); ?>">Contacto</a></li>
             </ul>
           </nav>
           <a class="btn" href="../InicioDeSesion/Usuario.php"><button>Cerrar Sesion</button></a>
@@ -41,7 +37,7 @@
     <div class="container-card">
       <div class="card">
           <figure>
-              <img src="../Recursos/fotografo1.jpg" alt="Fotógrafo 1" />
+              <img src="Recursos/fotografo1.jpg" alt="Fotógrafo 1" />
           </figure>
           <div class="contenido-card">
               <h3>Fotógrafo 1</h3>
@@ -77,7 +73,7 @@
       </div>
       <div class="card">
           <figure>
-              <img src="../Recursos/fotografo2.jpg" alt="Fotógrafo 2" />
+              <img src="Recursos/fotografo2.jpg" alt="Fotógrafo 2" />
           </figure>
           <div class="contenido-card">
               <h3>Fotógrafo 2</h3>
@@ -113,7 +109,7 @@
       </div>
       <div class="card">
           <figure>
-              <img src="../Recursos/fotografo3.jpg" alt="Fotógrafo 3" />
+              <img src="Recursos/fotografo3.jpg" alt="Fotógrafo 3" />
           </figure>
           <div class="contenido-card">
               <h3>Fotógrafo 3</h3>
@@ -149,7 +145,7 @@
       </div>
       <div class="card">
           <figure>
-              <img src="../Recursos/fotografo4.jpg" alt="Fotógrafo 4" />
+              <img src="Recursos/fotografo4.jpg" alt="Fotógrafo 4" />
           </figure>
           <div class="contenido-card">
               <h3>Fotógrafo 4</h3>
