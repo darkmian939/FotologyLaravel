@@ -25,13 +25,15 @@
 <div class="formulario">
     <div class="form-container">
         <h2>Contacto</h2>
-        <p>Ponerse en contacto</p>
+        <p>Contactate con nosotros!</p>
         <form action="enviar.php" method="post">
         <div class="social-icons">
                 <a href="#"><img src="Recursos/facebook2.png" alt="Facebook"></a>
                 <a href="#"><img src="Recursos/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="Recursos/gmail.png" alt="Gmail"></a>
                 <a href="#"><img src="Recursos/gorjeo.png" alt="Twitter"></a>
             </div>
+            <br>
             <div class="input-container">
                 <input type="text" id="nombre" name="nombre" required placeholder="Nombre"/>
                 <input type="email" id="email" name="email" required placeholder="Email"/>

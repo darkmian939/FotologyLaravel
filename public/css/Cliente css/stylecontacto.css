@@ -148,7 +148,7 @@ textarea {
 
 input[type="submit"] {
     background-color: #ffd700;
-    color: #fff;
+    color: black;
     border: none;
     padding: 15px 30px;
     cursor: pointer;
@@ -157,6 +157,7 @@ input[type="submit"] {
     display: block;
     margin: 20px auto;
     font-size: 15px;
+    font-weight: bold;
 }
 
 input[type="submit"]:hover {
