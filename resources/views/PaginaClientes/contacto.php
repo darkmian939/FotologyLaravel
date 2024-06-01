@@ -22,22 +22,30 @@
     <a class="btn" href="<?php echo route('InicioDeSesion.Usuario'); ?>"><button>Cerrar Sesion</button></a>
 </header>
 
-    <div class="formulario">
-      <h2>Contacto</h2>,
-        No seas timido </br><br>
-
-      <form action="enviar.php" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required />
-
-        <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" required></textarea>
-
-        <input type="submit" value="Enviar" />
-      </form>
+<div class="formulario">
+    <div class="form-container">
+        <h2>Contacto</h2>
+        <p>Ponerse en contacto</p>
+        <form action="enviar.php" method="post">
+        <div class="social-icons">
+                <a href="#"><img src="Recursos/facebook2.png" alt="Facebook"></a>
+                <a href="#"><img src="Recursos/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="Recursos/gorjeo.png" alt="Twitter"></a>
+            </div>
+            <div class="input-container">
+                <input type="text" id="nombre" name="nombre" required placeholder="Nombre"/>
+                <input type="email" id="email" name="email" required placeholder="Email"/>
+                <textarea id="mensaje" name="mensaje" required placeholder="Mensaje"></textarea>
+            </div>
+            <div class="contact-info">
+                <h1>No seas tímido</h1>
+                <h5>No dudes en ponerte en contacto con nosotros si tienes alguna duda o inquietud!</h5>
+            </div>
+            <input type="submit" value="ENVIAR" />
+        </form>
     </div>
+</div>
+
+
   </body>
 </html>
