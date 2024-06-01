@@ -24,7 +24,7 @@
                 <li><a href="{{ route('PaginaFotografo') }}">Publicaciones</a></li>
                 <li><a href="{{ route('PaginaCategorias') }}">Categorias</a></li>
                 <li><a href="{{ route('PaginaAyuda') }}">Ayuda</a></li>
-                <li><a href="{{ route('PaginaContacto') }}">Contacto</a></li>
+                <li><a href="<?php echo route('PaginaFotografos.contactoFotografo'); ?>">Contacto</a></li>
                 <li class="dropdown">
                     <a href="#">
                         <i class="fas fa-user"></i>

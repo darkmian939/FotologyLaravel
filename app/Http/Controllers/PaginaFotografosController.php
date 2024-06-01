@@ -20,4 +20,9 @@ class PaginaFotografosController extends Controller
     {
         return view('RegistroFotografo');
     }
+
+    public function contactoFotografo()
+    {
+        return view('PaginaFotografos.contactoFotografo');
+    }
 }
