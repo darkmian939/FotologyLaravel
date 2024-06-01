@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/Administrador css/stylebienvenida.css">
+    <link rel="stylesheet" href="{{ asset('css/Administrador css/stylebienvenida.css') }}">
     <title>Panel de Administrador</title>
 </head>
 <header class="header">
     <div class="logo">
         <img src="../Recursos/LOGOA.png" alt="Logo" />
     </div>
-    <a class="btn" href="<?php echo route('InicioDeSesion.Administrador'); ?>">
-            <button>Cerrar Sesión</button>
-        </a>
+    <a class="btn" href="<?php echo route('InicioDeSesion.administrador'); ?>">
+        <button>Cerrar Sesión</button>
+    </a>
 </header>
 <body>
     <div class="container">
