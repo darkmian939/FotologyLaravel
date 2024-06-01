@@ -10,12 +10,11 @@
 <body>
 <header class="header">
     <div class="logo">
-        <img src="{{ asset('Recursos/LOGOA.png') }}" alt="Logo" />
+        <img src="Recursos/LOGOA.png" alt="Logo" />
     </div>
     <div class="perfil-btn">
-        <form id="perfilForm" method="GET" action="{{ route('perfil.usuario') }}">
-            <input type="hidden" name="usuario_id" value="{{ Auth::id() }}">
-            <button type="submit" class="btn-profile"></button>
+        <form id="perfilForm" method="GET">
+
         </form>
     </div>
     <nav>
@@ -24,6 +23,7 @@
                 <li><a href="<?php echo route('PaginaClientes.fotografos'); ?>">Fotografos</a></li>
                 <li><a href="<?php echo route('PaginaClientes.categorias'); ?>">Categorías</a></li>
                 <li><a href="<?php echo route('PaginaClientes.contacto'); ?>">Contacto</a></li>
+                <li><a href="<?php echo route('PaginaClientes.perfilusuario'); ?>">Perfil</a></li>
             </ul>
     </nav>
     <a class="btn" href="<?php echo route('InicioDeSesion.Usuario'); ?>"><button>Cerrar Sesion</button></a>

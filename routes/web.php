@@ -29,6 +29,7 @@ Route::get('/fotografos', [PaginaClientesController::class, 'fotografos'])->name
 Route::get('/categorias', [PaginaClientesController::class, 'categorias'])->name('PaginaClientes.categorias');
 Route::get('/contacto', [PaginaClientesController::class, 'contacto'])->name('PaginaClientes.contacto');
 Route::post('/pagina-clientes', [PaginaClientesController::class, 'store'])->name('PaginaClientes.store');
+Route::get('/perfilusuario', [PaginaClientesController::class, 'perfilusuario'])->name('PaginaClientes.perfilusuario');
 
 // Rutas para la página de fotógrafos
 Route::post('/fotografo', [PaginaFotografosController::class, 'index'])->name('PaginaFotografos.index');
