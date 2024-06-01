@@ -25,6 +25,10 @@ class PaginaClientesController extends Controller
     {
         return view('PaginaClientes.contacto');
     }
+    public function perfilusuario()
+    {
+        return view('PaginaClientes.perfilusuario');
+    }
 
     public function store(Request $request)
     {

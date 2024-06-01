@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #dfdcdc;
+}
+
+/* Header */
+.header {
+    background-color: #14150f;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    padding: 5px 10%;
+}
+
+.header .logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.header .logo img {
+    height: 60px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover {
+    transform: scale(1.1);
+}
+
+.header .linksnav {
+    list-style: none;
+}
+
+.header .linksnav li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .linksnav li:hover {
+    transform: scale(1.1);
+}
+
+.header .linksnav a {
+    font-size: 700;
+    color: #eceff1;
+    text-decoration: none;
+}
+
+.header .linksnav li a:hover {
+    color: #ffc403;
+}
+
+.header .btn button {
+    margin-left: 20px;
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover {
+    background-color: #e2f1f8;
+    color: #ffc403;
+    transform: scale(1.1);
+}
+
+.nombre-cliente {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-right: 5px;
+    margin-top: 0px;
+}
+
+.main {
+    padding: 20px;
+}
+
+.card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    background-color: #000000;
+}
+
+.profile-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    color: white /* Color de texto */
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.profile-info h2 {
+    margin-bottom: 10px;
+    color: white /* Color de texto */
+}
+
+.profile-info p {
+    margin-bottom: 10px;
+    font-size: 18px; /* Tamaño de fuente */
+    color: white /* Color de texto */
+}
+
+
+.edit-button {
+    background-color: #ffd700;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.edit-button:hover {
+    background-color: #ff6600;
+}
+.p {
+    color: white;
+}
