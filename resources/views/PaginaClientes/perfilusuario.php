@@ -31,7 +31,7 @@
                 </div>
                 <div class="profile-info">
                     <h2 id="profile-name">@@@@</h2><br>
-                    <p>Nombre: <span id="profile-email"></span></p><br>
+                    <p>Nombre: <span id="contacto"></span></p><br>
                     <p>Correo Electrónico: <span id="profile-email"></span></p><br>
                     <p>Telefono de contacto: <span id="contacto"></span></p><br>
                     <p>Fecha de nacimiento: <span id="contacto"></span></p><br>
