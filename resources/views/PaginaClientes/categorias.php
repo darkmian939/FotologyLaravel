@@ -24,17 +24,15 @@
             <img src="Recursos/LOGOA.png" alt="Logo" />
         </div>
         <nav>
-        <ul class="linksnav">
+    <ul class="linksnav">
                 <li><a href="<?php echo route('PaginaClientes.pagina'); ?>">Inicio</a></li>
                 <li><a href="<?php echo route('PaginaClientes.fotografos'); ?>">Fotografos</a></li>
                 <li><a href="<?php echo route('PaginaClientes.categorias'); ?>">Categorías</a></li>
                 <li><a href="<?php echo route('PaginaClientes.contacto'); ?>">Contacto</a></li>
             </ul>
-          </nav>
-          <a class="btn" href="../InicioDeSesion/Usuario.php"><button>Cerrar Sesion</button></a>
-        </nav>
-    </header>
-
+    </nav>
+    <a class="btn" href="<?php echo route('InicioDeSesion.Usuario'); ?>"><button>Cerrar Sesion</button></a>
+</header>
     <h1>Categorias</h1>
 
     <div class="container-card">

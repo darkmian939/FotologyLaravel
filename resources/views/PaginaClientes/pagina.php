@@ -8,26 +8,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header class="header">
+<header class="header">
     <div class="logo">
-        <img src="Recursos/LOGOA.png" alt="Logo" />
-      </div>
-        <div class="perfil-btn">
-            <form id="perfilForm" method="GET" action="{{ route('perfil.usuario') }}">
-                <input type="hidden" name="usuario_id" value="{{ Auth::id() }}">
-                <button type="submit" class="btn-profile"></button>
-            </form>
-        </div>
-        <nav>
-            <ul class="linksnav">
+        <img src="{{ asset('Recursos/LOGOA.png') }}" alt="Logo" />
+    </div>
+    <div class="perfil-btn">
+        <form id="perfilForm" method="GET" action="{{ route('perfil.usuario') }}">
+            <input type="hidden" name="usuario_id" value="{{ Auth::id() }}">
+            <button type="submit" class="btn-profile"></button>
+        </form>
+    </div>
+    <nav>
+    <ul class="linksnav">
                 <li><a href="<?php echo route('PaginaClientes.pagina'); ?>">Inicio</a></li>
                 <li><a href="<?php echo route('PaginaClientes.fotografos'); ?>">Fotografos</a></li>
                 <li><a href="<?php echo route('PaginaClientes.categorias'); ?>">Categorías</a></li>
                 <li><a href="<?php echo route('PaginaClientes.contacto'); ?>">Contacto</a></li>
             </ul>
-        </nav>
-        <a class="btn" href="<?php echo route('InicioDeSesion.usuario'); ?>"><button>Cerrar Sesion</button></a>
-    </header>
+    </nav>
+    <a class="btn" href="<?php echo route('InicioDeSesion.Usuario'); ?>"><button>Cerrar Sesion</button></a>
+</header>
     <div class="fdestacados">
       <h1>Fotografos</h1>
       <h2>Destacados</h2>

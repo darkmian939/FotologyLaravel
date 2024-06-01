@@ -9,7 +9,7 @@
 <body>
 <div class="contenedor-form">
     <div id="usuarioContainer">
-        <form id="Usuario" action="{{ route('PaginaClientes.Pagina') }}" method="POST">
+        <form id="Usuario" action="{{ route('PaginaClientes.store') }}" method="POST">
             @csrf
             <div class="header">
                 <a class="selected" data-user-type="Usuario">USUARIO</a><br><br>
@@ -42,4 +42,6 @@
 <script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>
+
+
 
