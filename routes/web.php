@@ -23,6 +23,7 @@ Route::get('/registrousuario', [InicioDeSesionController::class, 'mostrarFormula
 Route::get('/registrofotografo', [InicioDeSesionController::class, 'mostrarFormularioFotografo'])->name('InicioDeSesion.registrofotografo');
 
 // Rutas para la página de clientes
+Route::get('/usuario', [InicioDeSesionController::class, 'usuario'])->name('InicioDeSesion.Usuario');
 Route::get('/pagina-clientes', [PaginaClientesController::class, 'pagina'])->name('PaginaClientes.pagina');
 Route::get('/fotografos', [PaginaClientesController::class, 'fotografos'])->name('PaginaClientes.fotografos');
 Route::get('/categorias', [PaginaClientesController::class, 'categorias'])->name('PaginaClientes.categorias');
