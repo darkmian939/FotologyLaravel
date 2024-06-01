@@ -39,3 +39,9 @@ Route::get('/pagina-administrador', [PaginaAdministradorController::class, 'inde
 Route::post('/pagina-administrador/bienvenida', [PaginaAdministradorController::class, 'PaginaAdministrador'])->name('PaginaAdministrador.bienvenida');
 Route::get('/pagina-administrador/cliente', [PaginaAdministradorController::class, 'Cliente'])->name('PaginaAdministrador.cliente');
 Route::get('/pagina-administrador/fotografo', [PaginaAdministradorController::class, 'Fotografo'])->name('PaginaAdministrador.fotografo');
+Route::get('/pagina-administrador/cliente', [PaginaAdministradorController::class, 'Cliente'])->name('PaginaAdministrador.crudcliente');
+Route::get('/pagina-administrador/fotografo', [PaginaAdministradorController::class, 'Fotografo'])->name('PaginaAdministrador.pagadministrador');
+
+
+
+
