@@ -1,3 +1,5 @@
+
+
 * {
     padding: 0;
     margin: 0;
@@ -79,14 +81,19 @@ body {
     font-size: 16px;
     font-weight: bold;
     color: white; /* Cambia el color del texto a blanco */
-    margin-right: 5px; /* Ajusta el margen derecho seg�n sea necesario */
-    margin-top: 0px; /* Ajusta el margen superior seg�n sea necesario */
+    margin-right: 5px; /* Ajusta el margen derecho seg�n sea necesario */
+    margin-top: 0px; /* Ajusta el margen superior seg�n sea necesario */
 }
 
 
 .formulario {
-    background-color: #fff;
-    max-width: 100vh;
+    display: flex;
+    justify-content: center; /* Centra el formulario horizontalmente */
+}
+
+.form-container {
+    background-color: BLACK;
+    max-width: 600px; /* Ajusta el ancho máximo del formulario */
     margin: 30px auto;
     padding: 50px;
     border-radius: 10px;
@@ -94,34 +101,62 @@ body {
 }
 
 h2 {
-    color: #ff6600;
+    color: #ffd700;
+    font-size: 70px; /* Reducción del tamaño de la fuente para evitar que sea demasiado grande */
+    text-align: center;
 }
 
-label {
-    display: block;
-    margin-top: 10px;
-    color: #333;
+p {
+    text-align: center;
+    margin-bottom: 20px; /* Añade un espacio entre el título y el párrafo */
+    color: white;
+}
+
+.input-container {
+    margin-bottom: 20px;
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 100%;
+    width: 100%; /* Ajusta el ancho de los campos de entrada y el área de texto */
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 10px;
+    border-radius: 5px; /* Ajusta el radio de borde */
 }
 
+.contact-info {
+    text-align: center; /* Centra el contenido dentro del contenedor de información de contacto */
+}
+
+.contact-info h1 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color:  #ffd700; /* Cambia el color del texto */
+    font-weight: bold; /* Sobrescribe cualquier estilo de negrita */
+}
+
+.contact-info h5 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: white; /* Cambia el color del texto */
+    font-weight: normal; /* Sobrescribe cualquier estilo de negrita */
+}
+
+
 input[type="submit"] {
-    background-color: #ff6600;
+    background-color: #ffd700;
     color: #fff;
     border: none;
-    padding: 20px 30px;
+    padding: 15px 30px;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 50px;
     transition: background-color 0.3s;
+    display: block;
+    margin: 20px auto;
+    font-size: 15px;
 }
 
 input[type="submit"]:hover {
@@ -156,4 +191,22 @@ input[type="submit"]:hover {
     .dropdown-content a:hover {
         background-color: #14150f;
     }
+
+
+/*iconos*/
+
+.social-icons {
+    margin-top: 20px;
+    text-align: center; /* Centra los iconos horizontalmente */
+}
+
+.social-icons a {
+    display: inline-block; /* Alinea los iconos en línea */
+    margin: 0 10px; /* Ajusta el margen entre los iconos */
+}
+
+.social-icons img {
+    width: 40px; /* Ajusta el ancho de las imágenes según sea necesario */
+    height: 40px; /* Ajusta el alto de las imágenes según sea necesario */
+}
 
