@@ -16,7 +16,7 @@
 
     <header class="header">
         <div class="logo">
-            <img src="{{ asset('Recursos/LOGOA.png') }}" alt="Logo">
+            <img src="Recursos/LOGOA.png" alt="Logo">
         </div>
         <nav>
             <ul class="linksnav">
