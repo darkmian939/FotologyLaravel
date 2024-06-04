@@ -30,9 +30,14 @@
     <h1>Bienvenido Camilo!</h1>
     <h2>Esto es Fotology!</h2>
 </div>
+<br>
+<br>
+<br>
+
 <div class="fdestacados">
     <h1>Fotografos destacados</h1>
 </div>
+<hr class="linea">
 <div class="contenedor">
     <img class="imagen" src="Recursos/foto1.jpg" alt="Paisaje" />
     <div class="texto">

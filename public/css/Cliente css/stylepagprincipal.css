@@ -147,7 +147,7 @@ body {
     font-size: 20px;
     text-align: center;
     color: #14150f;
-    padding: 30px;
+    margin-bottom: 10px;
 }
 
 .fdestacados h1 {
@@ -159,6 +159,15 @@ body {
     color: #ffc403;
 }
 
+.linea {
+    width: 50%;
+    margin: 0 auto;
+    border: none; /* Elimina el borde por defecto */
+    height: 5px; /* Altura de la línea */
+    background-color: #ffc403; /* Color de la línea */
+    margin-bottom: 20px; /* Espacio entre la línea y el siguiente elemento */
+}
+
 .bienvenido {
     background-color: #ffffff; /* Fondo blanco */
     padding: 20px; /* Espacio alrededor del texto */
@@ -168,8 +177,6 @@ body {
     width: 800px; /* Ancho deseado del recuadro */
     margin: 0 auto; /* Margen automático para centrar horizontalmente */
 }
-
-
 
 .bienvenido h1 {
     font-size: 50px;
