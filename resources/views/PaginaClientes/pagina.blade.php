@@ -27,7 +27,7 @@
 </header>
 <br>
 <div class="bienvenido">
-    <h1>Bienvenido Camilo!</h1>
+    <h1>¡Bienvenido Camilo!</h1>
     <h2>Esto es Fotology!</h2>
 </div>
 <br>
@@ -41,7 +41,7 @@
 <div class="contenedor">
     <img class="imagen" src="Recursos/foto1.jpg" alt="Paisaje" />
     <div class="texto">
-        <h1 class="nombre">Camila S.</h1>
+    <h1 class="nombre">Camila S. <span class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</span></h1>
         <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea officiis
             quis optio voluptatem deleniti, labore cumque, debitis neque, dolor
@@ -57,7 +57,7 @@
             debitis neque, dolor autem consequatur beatae. Quam excepturi rem,
             eaque quasi ad esse harum?Lorem ipsum.
         </p>
-        <a class="mas" href="#"><button>Saber mas</button></a>
+        <div class="top-1">Top 1</div>
     </div>
 </div>
 <br>
@@ -65,7 +65,7 @@
 <div class="contenedor">
     <img class="imagen" src="Recursos/foto5.jpg" alt="Paisaje" />
     <div class="texto">
-        <h1 class="nombre">Alexis M.</h1>
+        <h1 class="nombre">Alexis M. <span class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</span></h1>
         <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea officiis
             quis optio voluptatem deleniti, labore cumque, debitis neque, dolor
@@ -81,7 +81,7 @@
             debitis neque, dolor autem consequatur beatae. Quam excepturi rem,
             eaque quasi ad esse harum?Lorem ipsum.
         </p>
-        <a class="mas" href="#"><button>Saber mas</button></a>
+        <div class="top-1">Top 2</div>
     </div>
 </div>
 <br>
@@ -89,7 +89,7 @@
 <div class="contenedor">
     <img class="imagen" src="Recursos/foto3.jpg" alt="Paisaje" />
     <div class="texto">
-        <h1 class="nombre">Made R.</h1>
+        <h1 class="nombre">Made R. <span class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</span></h1>
         <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea officiis
             quis optio voluptatem deleniti, labore cumque, debitis neque, dolor
@@ -105,7 +105,7 @@
             debitis neque, dolor autem consequatur beatae. Quam excepturi rem,
             eaque quasi ad esse harum?Lorem ipsum.
         </p>
-        <p class="mas" href="#"><button>Saber mas</button></p>
+        <div class="top-1">Top 3</div>
     </div>
 </div>
 <br>

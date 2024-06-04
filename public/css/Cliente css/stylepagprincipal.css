@@ -187,6 +187,19 @@ body {
     color: #ffc403;
 }
 
+.estrellas {
+    color: gold; /* Cambia el color de las estrellas */
+    font-size: 24px; /* Ajusta el tamaño de las estrellas según sea necesario */
+}
+
+.top-1 {
+    font-size: 17px; /* Tamaño de la fuente */
+    color: #353535; /* Color del texto */
+    margin-top: 5px; /* Espacio desde arriba */
+    text-align: right; /* Alineación a la derecha */
+}
+
+
 
 .contenedor {
     background-color: #ffffff;
