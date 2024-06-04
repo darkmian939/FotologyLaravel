@@ -84,6 +84,44 @@ body {
     margin-top: 0px; /* Ajusta el margen superior según sea necesario */
 }
 
+.container {
+    margin-top: 20px;
+}
+
+.input-group {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+}
+
+.input-group .form-control {
+    border: 1px solid #ccc;
+    border-right: none;
+    padding: 10px;
+    flex-grow: 1;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+}
+
+.input-group .btn {
+    background-color: #14150f;
+    color: white;
+    border: 1px solid #14150f;
+    padding: 10px 20px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-group .btn:hover {
+    background-color: #ffc403;
+    color: #14150f;
+}
+
+.input-group .btn:hover {
+    background-color: #555;
+}
 
 /* Categorias */
 .categorias h1 {
@@ -92,7 +130,12 @@ body {
     color: #ffc403;
     padding: 20px;
 }
-
+.categorias h2 {
+    font-size: 35px;
+    text-align: center;
+    color: #000000;
+    padding: 20px;
+}
 
 .categorias p {
     text-align: justify;
