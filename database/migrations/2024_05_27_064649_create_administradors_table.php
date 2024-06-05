@@ -12,24 +12,24 @@ return new class extends Migration
     public function up(): void
     {
         // Tabla Administrador
-        Schema::create('administrador', function (Blueprint $table) {
+        Schema::create('administradores', function (Blueprint $table) {
             $table->bigIncrements('IDadministrador');
-            $table->string('Email', 50);
-            $table->string('password', 20);
+            $table->string('Email', 50)->unique();
+            $table->string('password');
             $table->timestamps();
         });
 
-        // Tabla Cliente
+        // Tabla Clientes
         Schema::create('clientes', function (Blueprint $table) {
-            $table->string('IDcliente', 30)->primary();
-            $table->string('email', 180)->unique();
-            $table->string('nameUser', 180);
-            $table->string('username', 90)->unique();
+            $table->id('IDcliente');
+            $table->string('nameUser', 255);
+            $table->string('username', 90)->nullable();
             $table->string('phone', 15);
-            $table->string('document', 50)->unique();
-            $table->date('birthday');
+            $table->string('document', 50)->nullable();
+            $table->date('birthday')->nullable();
             $table->string('image', 255)->nullable();
-            $table->string('password', 90);
+            $table->string('email', 255)->unique();
+            $table->string('password', 255);
             $table->timestamps();
         });
 
@@ -45,8 +45,8 @@ return new class extends Migration
             $table->string('image', 255);
             $table->text('description');
             $table->string('password', 90);
-            $table->string('facebook', 90);
-            $table->string('instagram', 90);
+            $table->string('facebook')->nullable()->change();
+            $table->string('instagram')->nullable()->change();
             $table->timestamps();
         });
 
@@ -54,7 +54,6 @@ return new class extends Migration
         Schema::create('portafolios', function (Blueprint $table) {
             $table->string('IDportafolio', 15)->primary();
             $table->unsignedBigInteger('IDfotografo');
-            $table->string('Nombre_portafolio', 30);
             $table->timestamps();
         });
 

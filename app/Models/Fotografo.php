@@ -2,27 +2,18 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
 
 class Fotografo extends Authenticatable
 {
-    use Notifiable;
-
-    protected $table = 'fotografos';
-    protected $primaryKey = 'IDfotografo';
-    public $incrementing = true;
+    protected $guard = 'fotografo';
 
     protected $fillable = [
-        'IDfotografo', 'Nombre_fotografo', 'Foto_de_perfil', 'Descripcion', 'Email', 'Contrasena', 'Direccion', 'Telefono', 'Portafolio'
+        'nameUser', 'username', 'phone', 'email', 'adress', 'birthday', 'description', 'password', 'image',
     ];
 
     protected $hidden = [
-        'Contrasena'
+        'password', 'remember_token',
     ];
-
-    public function getAuthPassword()
-    {
-        return $this->Contrasena;
-    }
 }

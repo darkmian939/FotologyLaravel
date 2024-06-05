@@ -9,7 +9,12 @@
 <body>
 <div class="contenedor-form">
     <div id="usuarioContainer">
-        <form id="Usuario" action="{{ route('PaginaClientes.store') }}" method="POST">
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+        <form id="Usuario" action="{{ route('usuario.login') }}" method="POST">
             @csrf
             <div class="header">
                 <a class="selected" data-user-type="Usuario">USUARIO</a><br><br>
@@ -22,15 +27,11 @@
             @endif
             <div class="fila">
                 <label for="Email">Usuario</label>
-                <input type="text" id="Email" name="Email" required>
+                <input type="email" id="Email" name="Email" required>
             </div>
             <div class="fila">
                 <label for="Clave">Contraseña</label>
                 <input type="password" id="Clave" name="Clave" required>
-            </div>
-            <div class="fila"><br><br>
-                <input type="checkbox" class="check" id="mantener-sesion" name="mantener-sesion">
-                <label for="mantener-sesion">Mantener Sesión</label>
             </div>
             <input type="submit" value="Iniciar Sesión" class="btn">
         </form>

@@ -9,7 +9,8 @@
 </head>
 <body>
     <div class="container-form sign-up">  
-        <form class="formulario" method="POST" action="registrodefotografo.php">
+        <form class="formulario" method="POST" action="{{ route('registro.fotografo') }}" enctype="multipart/form-data">
+            @csrf
             <h2 class="create-account">Crear una cuenta</h2>
             <div class="iconos">
                 <div class="border-icon">
@@ -22,12 +23,15 @@
                     <i class='bx bxl-microsoft'></i>
                 </div>
             </div>
-            <p class="cuenta-gratis">Crear una cuenta gratis</p>
-            <input type="text" name="nombre_fotografo" placeholder="nombre" required>
-            <input type="tel" name="telefono" placeholder="telefono" required>
-            <input type="email" name="email" placeholder="email" required>
-            <input type="text" name="direccion" placeholder="direccion" required>
-            <input type="password" name="contrasena" placeholder="contraseña" required>            
+            <h2 class="create-account">Crear una cuenta</h2>
+            <input type="text" name="nameUser" placeholder="Nombre completo" required>
+            <input type="text" name="username" placeholder="Nombre de usuario" required>
+            <input type="tel" name="phone" placeholder="Teléfono" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <input type="text" name="adress" placeholder="Dirección" required>
+            <input type="date" name="birthday" placeholder="Fecha de nacimiento" required>
+            <textarea name="description" placeholder="Descripción"></textarea>
+            <input type="password" name="contrasena" placeholder="Contraseña" required>            
             <input type="file" name="foto_perfil" accept="image/*" required>
             <input type="submit" value="Registrarse" name="registrarse">   
         </form>
@@ -36,7 +40,7 @@
             <div class="message">
                 <h2>Bienvenido a Fotology</h2>
                 <p>Si ya tienes una cuenta, por favor inicia sesión aquí</p>
-                <button><a href="index.php" class="sign-up-btn">Iniciar Sesión</a></button>
+                <button><a href="{{ route('InicioDeSesion.usuario') }}" class="sign-up-btn">Iniciar Sesión</a></button>
             </div>
         </div>
     </div>

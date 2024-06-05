@@ -14,15 +14,15 @@ class Administrador extends Authenticatable
     public $incrementing = true;
 
     protected $fillable = [
-        'IDadministrador', 'Email', 'Contrasena'
+        'Email', 'password'
     ];
 
     protected $hidden = [
-        'Contrasena'
+        'password'
     ];
 
     public function getAuthPassword()
     {
-        return $this->Contrasena;
+        return $this->password;
     }
 }

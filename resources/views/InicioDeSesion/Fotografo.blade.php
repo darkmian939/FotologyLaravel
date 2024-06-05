@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="contenedor-form">
-    <form id="Fotografo" action="{{ route('PaginaFotografos.PaginaFotografo') }}" method="POST">
+    <form id="Fotografo" action="{{ route('fotografo.login') }}" method="POST">
         @csrf
         <div class="header">
             <a class="selected" data-user-type="Usuario">FOTOGRAFO</a><br><br>
@@ -20,12 +20,12 @@
             </p>
         @endif
         <div class="fila">
-            <label for="username">Nombre de Fotógrafo</label>
-            <input type="text" id="username" name="username" required>
+            <label for="Email">Usuario</label>
+            <input type="email" id="Email" name="Email" required>
         </div>
         <div class="fila">
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" name="password" required>
+            <label for="Clave">Contraseña</label>
+            <input type="password" id="Clave" name="Clave" required>
         </div>
         <div class="fila"><br><br>
             <input type="checkbox" class="check" id="mantener-sesion" name="mantener-sesion">
@@ -40,4 +40,3 @@
 <script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>
-

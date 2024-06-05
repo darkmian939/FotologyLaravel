@@ -14,24 +14,37 @@
             <a class="selected" data-user-type="Administrador">ADMINISTRADOR</a><br><br>
         </div>
         <hr>
-        @if (isset($error))
-            <p class="error">{{ $error }}</p>
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <p class="error">{{ $errors->first() }}</p>
+            </div>
         @endif
-        <div class="fila">
-            <label for="usuario">Usuario de Administrador</label>
-            <input type="text" id="usuario" name="usuario">
-        </div>
-        <div class="fila">
-            <label for="contraseña">Contraseña</label>
-            <input type="password" id="contraseña" name="contraseña">
-        </div>
+        @if ($errors->has('usuario'))
+    <div class="alert alert-danger">
+        <p>{{ $errors->first('usuario') }}</p>
+    </div>
+@endif
+
+@if ($errors->has('contraseña'))
+    <div class="alert alert-danger">
+        <p>{{ $errors->first('contraseña') }}</p>
+    </div>
+@endif
+<div class="fila">
+    <label for="Email">Usuario</label>
+    <input type="email" id="Email" name="Email" required>
+</div>
+<div class="fila">
+    <label for="Clave">Contraseña</label>
+    <input type="password" id="Clave" name="Clave" required>
+</div>
         <div class="fila"><br><br>
             <input type="checkbox" class="check" id="mantener-sesion" name="mantener-sesion">
             <label for="mantener-sesion">Mantener Sesión</label>
         </div>
         <input type="submit" value="Iniciar Sesión" class="btn">
     </form>
-    <p>¿Quieres iniciar sesión como <a href="<?php echo route('InicioDeSesion.usuario'); ?>">Usuario</a> o <a href="<?php echo route('PaginaFotografos.index'); ?>">Fotografo</a>?</p>
+    <p>¿Quieres iniciar sesión como <a href="{{ route('InicioDeSesion.usuario') }}">Usuario</a> o <a href="{{ route('PaginaFotografos.index') }}">Fotógrafo</a>?</p>
     <a href="{{ route('InicioDeSesion.recuperar') }}" class="olvido">Olvidó la Contraseña</a>
 </div>
 <script src="{{ asset('script.js') }}"></script>
