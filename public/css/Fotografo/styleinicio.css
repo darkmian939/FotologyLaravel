@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #dfdcdc;
+}
+
+/* Header */
+.header {
+    background-color: #14150f;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    padding: 5px 10%;
+}
+
+    .header .logo {
+        cursor: pointer;
+        margin-right: auto;
+    }
+
+        .header .logo img {
+            height: 60px;
+            width: auto;
+            transition: all 0.3s;
+        }
+
+            .header .logo img:hover {
+                transform: scale(1.1);
+            }
+
+    .header .linksnav {
+        list-style: none;
+    }
+
+        .header .linksnav li {
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+            .header .linksnav li:hover {
+                transform: scale(1.1);
+            }
+
+        .header .linksnav a {
+            font-size: 700;
+            color: #eceff1;
+            text-decoration: none;
+        }
+
+        .header .linksnav li a:hover {
+            color: #ffc403;
+        }
+
+        .btn button {
+            border-radius: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            padding: 7px 20px;
+            background: #ffc403;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+        }
+        
+        .btn button:hover {
+                background-color: #cfcfcf;
+                color: #14150f;
+                transform: scale(1.1);
+            }
+
+        section {
+            margin: 20px 0;
+        }
+        
+        h2 {
+            font-size: 2em;
+            color: #ff6600;
+            border-bottom: 2px solid #ff6600;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .featured-photographers {
+            text-align: center;
+        }
+        
+        .photographer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .photographer {
+            border: 1px solid #ececec;
+            padding: 10px;
+            margin: 10px;
+            background-color: #f3f3f3;
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+        
+        .photographer .name {
+            font-size: 1.2em;
+            color: #000000;
+        }
+        
+        .photographer .rating {
+            color: #ff9900;
+            font-size: 1.2em;
+        }
+        
+.categories, .faq {
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.categories p, .faq p {
+    margin: 10px 0;
+}

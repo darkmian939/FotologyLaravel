@@ -13,10 +13,11 @@
         </div>
         <nav>
     <ul class="linksnav">
-    <a href="<?php echo route('PaginaClientes.pagina'); ?>">Inicio</a></li>
-                <li><a href="<?php echo route('PaginaClientes.fotografos'); ?>">Fotografos</a></li>
-                <li><a href="<?php echo route('PaginaClientes.contacto'); ?>">Contacto</a></li>
-                <li><a href="<?php echo route('PaginaClientes.perfilusuario'); ?>">Perfil</a></li>
+                <li><a href="">Inicio</a></li>
+                <li><a href="">Portafolio</a></li>
+                <li><a href="">Calificaciones</a></li>
+                <li><a href="">Perfil</a></li>
+                <li><a href="<?php echo route('PaginaFotografos.contactoFotografo'); ?>">Contacto</a></li>
             </ul>
     </nav>
     <a class="btn" href="<?php echo route('InicioDeSesion.Usuario'); ?>"><button>Cerrar Sesion</button></a>
@@ -51,3 +52,4 @@
 
   </body>
 </html>
+

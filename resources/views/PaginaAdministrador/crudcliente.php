@@ -89,7 +89,7 @@
 }
 
     </style>
-    <link rel="stylesheet" href="css/Administrador css/styleadministrador.css"> <!-- Ajusta la ruta según tu estructura de carpetas y configuración de contenido estático -->
+    <link rel="stylesheet" href="../css/Administrador css/styleadministrador.css"> <!-- Ajusta la ruta según tu estructura de carpetas y configuración de contenido estático -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/646ac4fad6.js" crossorigin="anonymous"></script>
     <title>Panel de Administrador</title>
@@ -100,13 +100,13 @@
             <img src="Recursos/LOGOA.png" alt="Logo" /> <!-- Ajusta la ruta según tu estructura de carpetas y configuración de contenido estático -->
         </div>
         <nav>
-            <ul class="linksnav">
+        <ul class="linksnav">
             <li><a href="<?php echo route('PaginaAdministrador.bienvenida'); ?>" >Inicio</a></li>
             </ul>
         </nav>
-        <a class="btn" href="<?php echo route('InicioDeSesion.Administrador'); ?>">
-            <button>Cerrar Sesión</button>
-        </a>
+        <a class="btn" href="<?php echo route('InicioDeSesion.administrador'); ?>">
+        <button>Cerrar Sesión</button>
+    </a>
     </header>
 
     <div class="container">
