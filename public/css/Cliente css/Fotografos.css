@@ -7,6 +7,9 @@
 
 body {
     background-color: #dfdcdc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Header */
@@ -15,154 +18,172 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 100%;
+    width: 100%;
     padding: 5px 10%;
 }
 
-    .header .logo {
-        cursor: pointer;
-        margin-right: auto;
-    }
-
-        .header .logo img {
-            height: 40px; /* Reducir la altura de la imagen */
-            width: auto; /* Mantener el ancho automático para conservar la proporción */
-            display: block; /* Convertir la imagen en un elemento de bloque para aplicar estilos de alineación */
-            margin: 0 auto; /* Centrar horizontalmente */
-        }
-
-            .header .logo img:hover {
-                transform: scale(1.1);
-            }
-
-    .header .linksnav {
-        list-style: none;
-    }
-
-        .header .linksnav li {
-            display: inline-block;
-            padding: 0 20px;
-        }
-
-            .header .linksnav li:hover {
-                transform: scale(1.1);
-            }
-
-        .header .linksnav a {
-            font-size: 700;
-            color: #eceff1;
-            text-decoration: none;
-        }
-
-        .header .linksnav li a:hover {
-            color: #ffc403;
-        }
-
-    .header .btn button {
-        margin-left: 20px;
-        font-weight: 700;
-        color: #1b3039;
-        padding: 9px 25px;
-        background: #eceff1;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: all 0.3s ease 0s;
-    }
-
-        .header .btn button:hover {
-            background-color: #e2f1f8;
-            color: #ffc403;
-            transform: scale(1.1);
-        }
-
-.nombre-cliente {
-    font-size: 16px;
-    font-weight: bold;
-    color: white; /* Cambia el color del texto a blanco */
-    margin-right: 5px; /* Ajusta el margen derecho según sea necesario */
-    margin-top: 0px; /* Ajusta el margen superior según sea necesario */
-}
-
-
-/* Categorias */
-.categorias h1 {
-    font-size: 35px;
-    text-align: center;
-    color: #ffc403;
-    padding: 20px;
-}
-
-
-.categorias p {
-    text-align: justify;
-    padding: 50px 300px;
-}
-
-.container-card {
-    width: 100%;
-    display: flex;
-    padding: 20px; /* Reducir el espacio entre el contenedor y el contenido */
-    margin: auto;
-}
-
-.card {
-    width: calc(25% - 40px); /* Ajustar el ancho de la tarjeta */
-    margin: 20px; /* Ajustar el margen entre las tarjetas */
-    border-radius: 6px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-    transition: all 400ms ease-out;
+.header .logo {
     cursor: pointer;
+    margin-right: auto;
 }
 
-    .card:hover {
-        box-shadow: 5px 5px 20px #ffc40345;
-        transform: translateY(-2%);
-    }
+.header .logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
 
-    .card img {
-        width: 100%;
-        height: 210px;
-    }
+.header .logo img:hover {
+    transform: scale(1.1);
+}
 
-    .card .contenido-card {
-        padding: 15px;
-        text-align: center;
-    }
+.header .linksnav {
+    list-style: none;
+}
 
-        .card .contenido-card h3 {
-            margin-bottom: 15px;
-            color: #1b3039;
-        }
+.header .linksnav li {
+    display: inline-block;
+    padding: 0 20px;
+}
 
-        .card .contenido-card p {
-            line-height: 1.8;
-            color: #14150f;
-            font-size: 14px;
-            margin-bottom: 5px;
-        }
+.header .linksnav li:hover {
+    transform: scale(1.1);
+}
 
-.smas button {
+.header .linksnav a {
     font-weight: 700;
-    color: #ffffff;
-    padding: 8px 25px;
-    background: #ffc403;
+    color: #eceff1;
+    text-decoration: none;
+}
+
+.header .linksnav li a:hover {
+    color: #ffc403;
+}
+
+.header .btn button {
+    margin-left: 20px;
+    font-weight: 700;
+    color: #1b3039;
+    padding: 9px 25px;
+    background: #eceff1;
     border: none;
-    border-radius: 10px;
+    border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
 
-    .smas button:hover {
-        background-color: #cfcfcf;
-        color: #14150f;
-        transform: scale(1.1);
-    }
+.header .btn button:hover {
+    background-color: #e2f1f8;
+    color: #ffc403;
+    transform: scale(1.1);
+}
 
+.container {
+    margin-top: 20px;
+}
 
-/*menu DESPLEGABLE */
+.input-group {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+}
+
+.input-group .form-control {
+    border: 1px solid #ccc;
+    border-right: none;
+    padding: 10px;
+    flex-grow: 1;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+}
+
+.input-group .btn {
+    background-color: #14150f;
+    color: white;
+    border: 1px solid #14150f;
+    padding: 10px 20px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-group .btn:hover {
+    background-color: #ffc403;
+    color: #14150f;
+}
+
+/* contenido de la vista - fotografos */
+h1 {
+    margin-top: 20px;
+}
+
+.search-bar {
+    margin: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.photographers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.photographer {
+    position: relative; /* Se añade posicionamiento relativo */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.photographer:hover {
+    transform: translateY(-5px);
+}
+
+.photographer img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.photographer h2 {
+    margin: 10px 0;
+}
+
+.photographer p {
+    margin: 0 10px 10px;
+}
+
+.estrellas {
+    color: gold; /* Cambia el color de las estrellas */
+    font-size: 24px; /* Ajusta el tamaño de las estrellas según sea necesario */
+}
+
+.title-container {
+    background-color: #ffffff; /* Color de fondo del recuadro */
+    padding: 20px; /* Espaciado interno del recuadro */
+    color: #000000; /* Color del texto */
+    text-align: center; /* Alineación del texto al centro */
+    border-radius: 5px; /* Radio de borde para crear esquinas redondeadas */
+    margin-bottom: 20px; /* Margen inferior para separar el título de los fotógrafos */
+}
+/* Menu desplegable */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -182,19 +203,17 @@ body {
 }
 
 .dropdown-content a {
-    color: black; /* Color del texto negro */
+    color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-    .dropdown-content a:hover {
-        background-color: #14150f;
-    }
+.dropdown-content a:hover {
+    background-color: #14150f;
+}
 
 /* Estilos personalizados para Starability */
-
-/* Cambiar el color de fondo de las estrellas */
 .starability-growRotate {
     display: inline-block;
     white-space: nowrap;
@@ -202,25 +221,24 @@ body {
     vertical-align: middle;
 }
 
-    .starability-growRotate input[type="radio"] {
-        display: none;
-    }
+.starability-growRotate input[type="radio"] {
+    display: none;
+}
 
-    .starability-growRotate label {
-        float: right;
-        padding: 0;
-        cursor: pointer;
-        -webkit-transition: .3s ease;
-        transition: .3s ease;
-    }
+.starability-growRotate label {
+    float: right;
+    padding: 0;
+    cursor: pointer;
+    transition: .3s ease;
+}
 
-        .starability-growRotate label:before {
-            content: '\2605';
-            font-size: 25px;
-            color: #000; /* Cambiar color de las estrellas a negro */
-        }
+.starability-growRotate label:before {
+    content: '\2605';
+    font-size: 25px;
+    color: #000;
+}
 
-    .starability-growRotate input[type="radio"]:checked ~ label:before,
-    .starability-growRotate input[type="radio"]:checked ~ label {
-        color: #ffcc00; /* Cambiar color de estrellas seleccionadas a amarillo */
-    }
+.starability-growRotate input[type="radio"]:checked ~ label:before,
+.starability-growRotate input[type="radio"]:checked ~ label {
+    color: #ffcc00;
+}
