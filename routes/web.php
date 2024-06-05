@@ -47,4 +47,3 @@ Route::get('/pagina-administrador/fotografo', [PaginaAdministradorController::cl
 Route::get('/pagina-administrador/cliente', [PaginaAdministradorController::class, 'Cliente'])->name('PaginaAdministrador.crudcliente');
 Route::get('/pagina-administrador/fotografo', [PaginaAdministradorController::class, 'Fotografo'])->name('PaginaAdministrador.pagadministrador');
 
-

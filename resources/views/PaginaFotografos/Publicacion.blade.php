@@ -54,7 +54,6 @@
     }
 </style>
 </head>
-
 <body>
     <div class="publicacion-form">
         <h2>Crear Publicación</h2>

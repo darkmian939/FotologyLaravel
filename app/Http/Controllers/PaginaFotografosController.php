@@ -25,6 +25,7 @@ class PaginaFotografosController extends Controller
     {
         return view('RegistroFotografo');
     }
+
     
     public function Publicacion()
     {

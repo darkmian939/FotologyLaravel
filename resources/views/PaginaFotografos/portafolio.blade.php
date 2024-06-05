@@ -29,6 +29,7 @@
         </nav>
 
     </header>
+
     <center>
     <div class="categorias">
         <h1>Mi Portafolio</h1>
