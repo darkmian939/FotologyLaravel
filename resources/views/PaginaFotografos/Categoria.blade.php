@@ -45,9 +45,6 @@
         window.location.href = "<?php echo route('PaginaFotografos.Publicacion'); ?>";
     });
 </script>
-
-   
-
 <style>
 * {
     padding: 0;
