@@ -51,6 +51,7 @@ Route::get('/perfilusuario', [PaginaClientesController::class, 'perfilusuario'])
 Route::post('/fotografo', [PaginaFotografosController::class, 'index'])->name('PaginaFotografos.index');
 Route::get('/pagina-fotografo', [PaginaFotografosController::class, 'PaginaFotografo'])->name('PaginaFotografos.PaginaFotografo');
 Route::get('/contactoFotografo', [PaginaFotografosController::class, 'contactoFotografo'])->name('PaginaFotografos.contactoFotografo');
+Route::get('/perfilFotografo', [PaginaFotografosController::class, 'perfilFotografo'])->name('PaginaFotografos.perfilFotografo');
 
 // Rutas para la página de administradores
 Route::get('/pagina-administrador', [PaginaAdministradorController::class, 'index'])->name('PaginaAdministrador.index');

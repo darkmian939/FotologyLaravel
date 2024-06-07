@@ -24,7 +24,7 @@
                 <li><a href="">Portafolio</a></li>
                 <li><a href="">Calificacion</a></li>
                 <li><a href="<?php echo route('PaginaFotografos.contactoFotografo'); ?>">Contacto</a></li>
-                <li><a href="">Perfil</a></li>          
+                <li><a href="<?php echo route('PaginaFotografos.perfilFotografo'); ?>">Perfil</a></li>          
             </ul>
         </nav>
         <a class="btn" href="<?php echo route('InicioDeSesion.Usuario'); ?>"><button>Cerrar Sesion</button></a>

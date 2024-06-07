@@ -1,0 +1,162 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #dfdcdc;
+}
+bodya {
+    padding: 20px;
+
+}
+
+/* Header */
+.header {
+    background-color: #14150f;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    padding: 5px 10%;
+}
+
+    .header .logo {
+        cursor: pointer;
+        margin-right: auto;
+    }
+
+        .header .logo img {
+            height: 60px;
+            width: auto;
+            transition: all 0.3s;
+        }
+
+            .header .logo img:hover {
+                transform: scale(1.1);
+            }
+
+    .header .linksnav {
+        list-style: none;
+    }
+
+        .header .linksnav li {
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+            .header .linksnav li:hover {
+                transform: scale(1.1);
+            }
+
+        .header .linksnav a {
+            font-size: 700;
+            color: #eceff1;
+            text-decoration: none;
+        }
+
+        .header .linksnav li a:hover {
+            color: #ffc403;
+        }
+
+        .btn button {
+            border-radius: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            padding: 7px 20px;
+            background: #ffc403;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+        }
+        
+        .btn button:hover {
+                background-color: #cfcfcf;
+                color: #14150f;
+                transform: scale(1.1);
+            }
+
+            .profile-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                
+            }
+            
+            .profile-box {
+                background-color: #ffdd0386;
+                padding: 60px 20px 20px;
+                border-radius: 40px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.30);
+                text-align: center;
+                max-width: 400px;   
+                width: 100%;
+                position: relative;
+            }
+            
+            .profile-photo-container {
+                position: absolute;
+                top: -60px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 120px;
+                height: 120px;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 5px solid #ffb74d;
+                background-color: #fff;
+            }
+            
+            .profile-photo {
+                width: 50%;
+                height: 50%;
+                object-fit: cover;
+                padding: 5px
+            }
+            
+            .profile-info p {
+                padding: 5px;
+                margin: 10px 0;
+                color: #000000;
+                font-size: 16px;
+                line-height: 1.5;
+            }
+            
+            .profile-info p strong {
+                color: #000000;
+            }
+            .profile-actions {
+                margin-top: 20px;
+            }
+            
+            .edit-profile-button {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #ff7043;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: background-color 0.3s;
+            }
+
+            .edit-profile-button {
+                border-radius: 20px;
+                font-weight: 700;
+                color: #ffffff;
+                padding: 7px 20px;
+                background: #ff9a03;
+                border: none;
+                cursor: pointer;
+                transition: all 0.3s ease 0s;
+            }
+            
+            .edit-button:hover {
+                    background-color: #ebebeb;
+                    color: #14150f;
+                    transform: scale(1.1);
+                }
