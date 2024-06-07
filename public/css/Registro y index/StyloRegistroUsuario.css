@@ -78,6 +78,7 @@ body {
     margin: 2rem;
     background-color: #fff;
     text-align: center;
+    border-radius: 50px;
 }
 
 .create-account {
@@ -111,7 +112,8 @@ body {
 }
 
 .cuenta-gratis {
-    padding: 2rem 0;
+margin-top: 20px;
+margin-bottom: 20px;
 }
 
 .formulario input {

@@ -88,12 +88,13 @@ body {
 }
 
 .card {
-    max-width: 600px;
+    max-width: 420px;
     margin: 20px auto;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    background-color: #000000;
+    background-color: #ffdd0386;
+    border-radius: 50px;
 }
 
 .profile-form {
@@ -110,12 +111,13 @@ body {
 }
 
 .profile-image img {
-    width: 150px;
-    height: 150px;
+    margin-top: 50px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    color: white /* Color de texto */
+    color: black /* Color de texto */
 }
 
 .profile-info {
@@ -124,13 +126,13 @@ body {
 
 .profile-info h2 {
     margin-bottom: 10px;
-    color: white /* Color de texto */
+    color: black/* Color de texto */
 }
 
 .profile-info p {
     margin-bottom: 10px;
     font-size: 18px; /* Tamaño de fuente */
-    color: white /* Color de texto */
+    color: black /* Color de texto */
 }
 
 
