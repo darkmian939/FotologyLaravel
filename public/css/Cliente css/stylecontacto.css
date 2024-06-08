@@ -13,7 +13,7 @@ body {
 
 /* Header */
 .header {
-    background-color: #14150f;
+    background-color: #140c01;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -21,6 +21,80 @@ body {
     padding: 5px 10%;
 }
 
+.header2 {
+    width: 100%;
+    height: 500px;
+    background: #a8ff78;  
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(44, 55%, 47%, 0.493), hsla(56, 100%, 61%, 0.541)), url(../../Recursos/foti.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(44, 100%, 51%, 0.582), hsla(56, 100%, 51%, 0.514)), url(../../Recursos/foti.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top left;
+    position: relative;
+    margin-top: -25px;
+}
+.container2 {
+    text-align: center;
+    padding: 50px 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+    margin-bottom: 95px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin-left: -30px;
+    margin-right: -30px;
+    width: calc(100% + 60px);
+    margin-top: -13px;
+    overflow: hidden;
+    background-color: #a7ff7800; /* Color de fondo */
+}
+
+.container2 .bigTitle {
+    font-size: 250px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.container2 .smallTitle {
+    font-weight: bold;
+    font-size: 100px;
+    position: absolute;
+    top: 170px;
+    color: 'black'; /* Color del texto */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+.wave{
+    position: absolute;
+    bottom:  0;
+    width:  100%;
+
+}
+.fdestacados {
+    font-size: 20px;
+    text-align: center;
+    color: #14150f;
+    margin-bottom: 5px;
+}
+
+.fdestacados h1 {
+    font-size: 35px;
+}
+
+.linea2 {
+    width: 50%;
+    margin: 0 auto;
+    border: none; /* Elimina el borde por defecto */
+    height: 5px; /* Altura de la línea */
+    background-color: #ffc403; /* Color de la línea */
+    margin-bottom: 20px; /* Espacio entre la línea y el siguiente elemento */
+}
     .header .logo {
         cursor: pointer;
         margin-right: auto;
@@ -132,8 +206,8 @@ textarea {
 }
 
 .contact-info h1 {
-    margin-bottom: 10px;
-    font-size: 18px;
+    margin-bottom: 2px;
+    font-size: 45px;
     color:  #ffd700; /* Cambia el color del texto */
     font-weight: bold; /* Sobrescribe cualquier estilo de negrita */
 }
@@ -144,7 +218,6 @@ textarea {
     color: white; /* Cambia el color del texto */
     font-weight: normal; /* Sobrescribe cualquier estilo de negrita */
 }
-
 
 input[type="submit"] {
     background-color: #ffd700;
@@ -204,9 +277,11 @@ input[type="submit"]:hover {
 .social-icons a {
     display: inline-block; /* Alinea los iconos en línea */
     margin: 0 10px; /* Ajusta el margen entre los iconos */
+    margin-top: -50px;
 }
 
 .social-icons img {
+   
     width: 40px; /* Ajusta el ancho de las imágenes según sea necesario */
     height: 40px; /* Ajusta el alto de las imágenes según sea necesario */
 }

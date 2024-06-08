@@ -7,9 +7,7 @@
 
 body {
     background-color: #dfdcdc;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-bottom: -10;
 }
 
 /* Header */
@@ -18,8 +16,52 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 100%;
+    height: 100%;
     padding: 5px 10%;
+}
+.header2 {
+    width: 100%;
+    height: 500px;
+    background: #a8ff78;  
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(44, 55%, 47%, 0.493), hsla(56, 100%, 61%, 0.541)), url(../../Recursos/foti.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(44, 100%, 51%, 0.582), hsla(56, 100%, 51%, 0.514)), url(../../Recursos/foti.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top left;
+    position: relative;
+    margin-top: -25px;
+}
+.textos-header {
+    text-align: center; /* Centra el contenido */
+    padding: 50px 0; /* Añade un espacio alrededor del contenido */
+    font-family: Arial, sans-serif; /* Utiliza una fuente específica */
+}
+.linea {
+    width: 50%;
+    margin: 0 auto;
+    border: none; /* Elimina el borde por defecto */
+    height: 5px; /* Altura de la línea */
+    background-color: #ffc403; /* Color de la línea */
+    margin-bottom: 20px; /* Espacio entre la línea y el siguiente elemento */
+}
+.textos-header h1 {
+    font-size: 200px; /* Tamaño del texto del h1 */
+    margin-bottom: -20px; /* Añade un espacio entre el h1 y el h2 */
+    color: #FFF; /* Color del texto */
+}
+
+.textos-header h2 {
+    font-size: 24px; /* Tamaño del texto del h2 */
+    color: #FFF; /* Color del texto */
+}
+.wave{
+    position: absolute;
+    bottom:  0;
+    width:  100%;
+
 }
 
 .header .logo {
@@ -28,10 +70,9 @@ body {
 }
 
 .header .logo img {
-    height: 40px;
+    height: 60px;
     width: auto;
-    display: block;
-    margin: 0 auto;
+    transition: all 0.3s;
 }
 
 .header .logo img:hover {
@@ -77,6 +118,14 @@ body {
     background-color: #e2f1f8;
     color: #ffc403;
     transform: scale(1.1);
+}
+
+.nombre-cliente {
+    font-size: 16px;
+    font-weight: bold;
+    color: white; /* Cambia el color del texto a blanco */
+    margin-right: 5px; /* Ajusta el margen derecho según sea necesario */
+    margin-top: 0px; /* Ajusta el margen superior según sea necesario */
 }
 
 .container {

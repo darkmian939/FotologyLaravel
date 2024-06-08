@@ -27,12 +27,34 @@
         </nav>
         <a class="btn" href="<?php echo route('InicioDeSesion.Usuario'); ?>"><button>Cerrar Sesión</button></a>
     </header>
-    <div class="title-container">
-        <h1>Los Mejores Fotógrafos</h1>
+    <br>
+<div class="header2" style="position: relative; z-index: 1;">
+<section class="textos-header">
+            <h1>
+                Fotografos
+            </h1>
+            <h2>
+                Encuentra tu fotografo de preferencia
+            </h2>
+        </section>
+    <div class="wave" style="height: 150px; overflow: hidden; margin-bottom: -20px; z-index: 1;">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%; filter: blur(1px);">
+    <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path>
+</svg>
     </div>
+</div>
+<center>
+<div class="fdestacados" style="margin-top: 15px; position: relative; z-index: 2;">
+    <h1 style="margin-top: -70px;">Todos los fotografos disponibles</h1>
+    <hr class="linea"></hr>
+</div>
+
+
+
     <div class="search-bar">
         <input type="text" placeholder="Buscar fotógrafos..." id="searchInput">
     </div>
+    </center>
     <div class="photographers-grid" id="photographersGrid">
         <div class="photographer">
         <span class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</span>

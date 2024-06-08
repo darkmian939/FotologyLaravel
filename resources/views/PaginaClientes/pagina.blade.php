@@ -26,17 +26,24 @@
     <a class="btn" href="<?php echo route('InicioDeSesion.Usuario'); ?>"><button>Cerrar Sesion</button></a>
 </header>
 <br>
-<div class="bienvenido">
-    <h1>¡Bienvenido Camilo!</h1>
-    <h2>Esto es Fotology!</h2>
+<div class="header2" style="position: relative; z-index: 1;">
+<section class="textos-header">
+            <h1>Bienvenidos</h1>
+            <h2>Aqui empieza nuestra aventura</h2>
+        </section>
+    <div class="wave" style="height: 150px; overflow: hidden; margin-bottom: -20px; z-index: 1;">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%; filter: blur(1px);">
+    <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #dfdcdc;"></path>
+</svg>
+    </div>
 </div>
-<br>
-<br>
-<br>
 
-<div class="fdestacados">
-    <h1>Fotografos destacados</h1>
+<div class="fdestacados" style="margin-top: 15px; position: relative; z-index: 2;">
+    <h1 style="margin-top: -70px;">Fotógrafos destacados</h1>
 </div>
+<hr class="linea"></hr>
+
+
 <hr class="linea">
 <div class="contenedor">
     <img class="imagen" src="Recursos/foto1.jpg" alt="Paisaje" />
