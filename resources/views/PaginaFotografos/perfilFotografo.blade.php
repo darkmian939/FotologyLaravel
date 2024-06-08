@@ -38,9 +38,10 @@
                 <p><strong>Correo Electrónico:</strong> rogz@gmail.com</p>
                 <p><strong>Teléfono de Contacto:</strong> +123456789</p>
                 <p><strong>Fecha de Nacimiento:</strong> 01/01/1980</p>
+                <p><strong>Descripcion:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione officiis laboriosam beatae fugiat, soluta id temporibus facilis libero reiciendis eius iure quaerat? Possimus ratione at ducimus modi, quasi rem nesciunt?</p>
             </div>
             <div class="profile-actions">
-                <a href="/editar-perfil" class="edit-profile-button">Editar Perfil</a>
+                <a href="<?php echo route('PaginaFotografos.editarperfilFotografo'); ?>" class="edit-profile-button">Editar Perfil</a>
             </div>
         </div>
         

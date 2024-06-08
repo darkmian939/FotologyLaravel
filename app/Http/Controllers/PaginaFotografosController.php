@@ -30,4 +30,9 @@ class PaginaFotografosController extends Controller
     {
         return view('PaginaFotografos.perfilFotografo');
     }
+
+    public function editarperfilFotografo()
+    {
+        return view('PaginaFotografos.editarperfilFotografo');
+    }
 }
