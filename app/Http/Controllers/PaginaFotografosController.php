@@ -35,4 +35,15 @@ class PaginaFotografosController extends Controller
     {
         return view('PaginaFotografos.editarperfilFotografo');
     }
+
+    public function Publicacion()
+    {
+        return view('PaginaFotografos.Publicacion');
+    }
+
+    public function Categoria(Request $request)
+    {
+        $category = $request->query('category'); // Recuperar el parámetro de consulta 'category' de la URL
+        return view('PaginaFotografos.Categoria', ['category' => $category]);
+    }
 }

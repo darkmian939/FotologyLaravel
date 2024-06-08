@@ -20,8 +20,7 @@
         </div>
         <nav>
             <ul class="linksnav">
-                <!-- <li><a href="{{ route('PaginaFotografos.PaginaFotografo') }}">Inicio</a></li> -->
-                <li><a href="">Portafolio</a></li>
+                <li><a href="<?php echo route('PaginaFotografos.portafolio'); ?>">Portafolio</a></li>
                 <li><a href="">Calificacion</a></li>
                 <li><a href="<?php echo route('PaginaFotografos.contactoFotografo'); ?>">Contacto</a></li>
                 <li><a href="<?php echo route('PaginaFotografos.perfilFotografo'); ?>">Perfil</a></li>          

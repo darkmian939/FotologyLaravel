@@ -53,6 +53,10 @@ Route::get('/pagina-fotografo', [PaginaFotografosController::class, 'PaginaFotog
 Route::get('/contactoFotografo', [PaginaFotografosController::class, 'contactoFotografo'])->name('PaginaFotografos.contactoFotografo');
 Route::get('/perfilFotografo', [PaginaFotografosController::class, 'perfilFotografo'])->name('PaginaFotografos.perfilFotografo');
 Route::get('/editarperfilFotografo', [PaginaFotografosController::class, 'editarperfilFotografo'])->name('PaginaFotografos.editarperfilFotografo');
+Route::get('/portafolio', [PaginaFotografosController::class, 'portafolio'])->name('PaginaFotografos.portafolio');
+Route::get('/Categoria', [PaginaFotografosController::class, 'Categoria'])->name('PaginaFotografos.Categoria');
+Route::get('/Publicacion', [PaginaFotografosController::class, 'Publicacion'])->name('PaginaFotografos.Publicacion');
+
 
 // Rutas para la página de administradores
 Route::get('/pagina-administrador', [PaginaAdministradorController::class, 'index'])->name('PaginaAdministrador.index');
