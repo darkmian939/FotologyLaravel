@@ -9,13 +9,16 @@
 </head>
 <body>
     <div class="container-form sign-up">
-        <div class="welcome-back">
-            <div class="message">
-                <h2>Bienvenido a Fotology</h2>
-                <p>Si ya tienes una cuenta, por favor inicia sesión aquí</p>
-                <button><a href="{{ route('InicioDeSesion.usuario') }}" class="sign-up-btn">Iniciar Sesión</a></button>
-            </div>
-        </div>
+    <div class="welcome-back">
+    <div class="message">
+        <img src="Recursos/LOGOA.png" alt="Bienvenido a Fotology" class="welcome-image">
+        <h2>Bienvenido a Fotology</h2>
+        <p>Si ya tienes una cuenta, por favor inicia sesión aquí</p>
+        <button class="custom-button">
+            <a href="{{ route('InicioDeSesion.usuario') }}" class="sign-up-btn">Iniciar Sesión</a>
+        </button>
+    </div>
+</div>
         <form class="formulario" method="POST" action="{{ route('registro.usuario') }}" enctype="multipart/form-data">
             @csrf
             <h2 class="create-account">Crear una cuenta</h2>

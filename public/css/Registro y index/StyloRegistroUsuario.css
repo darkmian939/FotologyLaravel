@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +22,6 @@ body {
     height: 90vh;
     display: flex;
     justify-content: space-around;
-    transition: all .5s ease-out;
 }
 
 .container-form.sign-up .message button {
@@ -29,7 +29,7 @@ body {
     color: #fff;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     text-decoration: none;
     transition: background-color 0.3s;
 }
@@ -40,37 +40,83 @@ body {
 }
 
 .welcome-back {
-    display: flex;
-    align-items: center;
-    text-align: center;
+    text-align: center; /* Centra el contenido del contenedor */
+    padding: 2rem; /* Añade un poco de padding alrededor del contenedor */
 }
 
 .message {
-    padding: 1rem;
+    display: inline-block; /* Asegura que el contenido se ajuste a su contenido */
+    text-align: center; /* Centra el contenido dentro del mensaje */
+    max-width: 400px; /* Limita el ancho máximo del mensaje */
+    margin: auto; /* Centra el contenedor */
+    background-color: #f9f9f9; /* Fondo sutil */
+    padding: 2rem; /* Padding interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-top: 150px;
 }
 
-.message h2 {
-    font-size: 1.7rem;
-    padding: 1rem 0;
+.welcome-image {
+    max-width: 50%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    margin-bottom: 1rem; /* Margen inferior para separar la imagen del texto */
 }
 
-.message button {
-    padding: 1rem;
-    font-weight: 400;
+h2 {
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+    font-size: 1.5rem; /* Tamaño de fuente */
+    font-weight: 700; /* Peso de la fuente */
+    color: #333; /* Color del texto */
+    margin-bottom: 1rem; /* Margen inferior */
+}
+
+p {
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+    font-size: 1rem; /* Tamaño de fuente */
+    font-weight: 400; /* Peso de la fuente */
+    color: #666; /* Color del texto */
+    margin-bottom: 1.5rem; /* Margen inferior */
+}
+
+.custom-button {
+    padding: 0.5rem 1rem; /* Reducido para hacer el botón más pequeño */
     background-color: #ff914d;
-    border-radius: 2rem;
+    border-radius: 25px;
     border: none;
-    outline: none;
     cursor: pointer;
-    font-size: .9rem;
-    margin-top: 2rem;
-    transition: all .3s ease-in;
+    font-size: 0.875rem; /* Tamaño de fuente más pequeño */
+    margin-top: 1.5rem; /* Ajustado para mantener la proporción */
+    transition: background-color .3s ease-in, transform .2s ease;
     color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
 }
 
-.message button:hover {
-    background-color: #ffde59;
+.custom-button a {
+    text-decoration: none; /* Elimina la línea debajo del texto */
+    color: #fff; /* Asegura que el texto del enlace sea blanco */
+    font-weight: 500; /* Un poco más grueso que el original para mejor legibilidad */
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto para mantener consistencia */
+    display: block; /* Permite que el enlace ocupe todo el botón */
+    width: 100%; /* Hace que el enlace ocupe todo el ancho del botón */
+    height: 100%; /* Hace que el enlace ocupe todo el alto del botón */
+    text-align: center; /* Centra el texto del enlace */
+    padding: 0.5rem 1rem; /* Añade padding para hacer clic en toda el área del botón */
+    box-sizing: border-box; /* Asegura que el padding no exceda el tamaño del botón */
 }
+
+.custom-button:hover {
+    background-color: #ffde59; /* Cambia el color de fondo al pasar el ratón por encima */
+    transform: translateY(-2px); /* Efecto de elevación al pasar el ratón por encima */
+}
+
+.custom-button:active {
+    background-color: #ffc107; /* Cambia el color de fondo al hacer clic */
+    transform: translateY(0); /* Sin elevación al hacer clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más pequeña al hacer clic */
+}
+
 
 .formulario {
     width: 400px;
@@ -78,6 +124,8 @@ body {
     margin: 2rem;
     background-color: #fff;
     text-align: center;
+    border-radius: 50px;
+    height: 840px;
 }
 
 .create-account {
@@ -115,32 +163,52 @@ body {
 }
 
 .formulario input {
-    width: 70%;
-    display: block;
-    margin: auto;
-    margin-bottom: 2rem;
-    background-color: transparent;
-    border: none;
-    border-bottom: rgb(0, 0, 0) thin solid;
-    text-align: center;
-    outline: none;
-    padding: .2rem 0;
-    font-size: .9rem;
-    color: rgb(0, 0, 0);
+    width: 90%; /* Mantiene el ancho del 70% del contenedor padre */
+    display: block; /* Asegura que el elemento ocupe toda la línea */
+    margin: 1rem auto; /* Centra el elemento y añade margen arriba y abajo */
+    padding: 0.5rem 1rem; /* Añade espacio interno para mayor área clicable */
+    background-color: transparent; /* Fondo transparente */
+    border: 1px solid rgb(0, 0, 0); /* Borde delgado y negro */
+    border-radius: 50px; /* Hace los bordes completamente redondeados */
+    text-align: center; /* Centra el texto */
+    outline: none; /* Elimina el contorno predeterminado */
+    font-size: 1rem; /* Tamaño de fuente ligeramente mayor para mejor legibilidad */
+    color: rgb(0, 0, 0); /* Color del texto negro */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transiciones suaves para hover y focus */
 }
 
+.formulario input:focus {
+    border-color: rgb(255, 187, 0); /* Cambia el color del borde al hacer focus */
+    box-shadow: 0 0 5px rgba(255, 217, 0, 0.5); /* Añade una sombra sutil */
+}
+
+
 .formulario input[type="submit"] {
-    width: 60%;
-    margin: auto;
-    border: solid thin #ff914d;
-    padding: .7rem;
-    border-radius: 2rem;
-    background-color: #ffde59;
-    font-weight: 600;
-    margin-top: 3rem;
-    font-size: .8rem;
-    cursor: pointer;
-    color: #222;
+    width: 50%; /* Mantiene el ancho del 50% del contenedor padre */
+    display: block; /* Asegura que el elemento ocupe toda la línea */
+    margin: 3rem auto 1rem auto; /* Centra el elemento y añade margen superior e inferior */
+    padding: 0.7rem 1rem; /* Añade espacio interno para mayor área clicable */
+    border: 2px solid #ff914d; /* Borde un poco más grueso para mejor visibilidad */
+    border-radius: 2rem; /* Bordes redondeados */
+    background-color: #ff914d; /* Color de fondo */
+    color: #ffffff; /* Color del texto */
+    font-weight: 600; /* Fuente más gruesa */
+    font-size: 1rem; /* Tamaño de fuente más grande para mejor legibilidad */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar por encima */
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s; /* Transiciones suaves para hover y focus */
+    margin-top: 30px;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #ffc107; /* Cambia el color de fondo al pasar el ratón por encima */
+    border-color: #ffb300; /* Cambia el color del borde al pasar el ratón por encima */
+}
+
+.formulario input[type="submit"]:active {
+    background-color: #ffb300; /* Cambia el color de fondo al hacer clic */
+    border-color: #ffb300; /* Cambia el color del borde al hacer clic */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Añade una sombra al hacer clic */
 }
 
 .sign-in {
