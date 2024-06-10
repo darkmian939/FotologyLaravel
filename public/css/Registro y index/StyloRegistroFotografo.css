@@ -21,7 +21,6 @@ body {
     height: 90vh;
     display: flex;
     justify-content: space-around;
-    transition: all .5s ease-out;
 }
 
 .container-form.sign-up .message button {
@@ -29,7 +28,7 @@ body {
     color: #fff;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     text-decoration: none;
     transition: background-color 0.3s;
 }
@@ -40,36 +39,81 @@ body {
 }
 
 .welcome-back {
-    display: flex;
-    align-items: center;
     text-align: center;
+    padding: 2rem;
 }
 
 .message {
-    padding: 1rem;
+    display: inline-block;
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
 }
 
-.message h2 {
-    font-size: 1.7rem;
-    padding: 1rem 0;
+.welcome-image {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
-.message button {
-    padding: 1rem;
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
     font-weight: 400;
-    background-color: #ff914d;
-    border-radius: 2rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: .9rem;
-    margin-top: 2rem;
-    transition: all .3s ease-in;
-    color: #fff;
+    color: #666;
+    margin-bottom: 1.5rem;
 }
 
-.message button:hover {
+.custom-button {
+    padding: 0.5rem 1rem;
+    background-color: #ff914d;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    margin-top: 1.5rem;
+    transition: background-color .3s ease-in, transform .2s ease;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+.custom-button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+}
+
+.custom-button:hover {
     background-color: #ffde59;
+    transform: translateY(-2px);
+}
+
+.custom-button:active {
+    background-color: #ffc107;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .formulario {
@@ -78,6 +122,9 @@ body {
     margin: 2rem;
     background-color: #fff;
     text-align: center;
+    border-radius: 50px;
+    height: 840px;
+    margin-top: 10px;
 }
 
 .create-account {
@@ -115,32 +162,52 @@ body {
 }
 
 .formulario input {
-    width: 70%;
+    width: 90%;
     display: block;
-    margin: auto;
-    margin-bottom: 2rem;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
     background-color: transparent;
-    border: none;
-    border-bottom: rgb(0, 0, 0) thin solid;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50px;
     text-align: center;
     outline: none;
-    padding: .2rem 0;
-    font-size: .9rem;
+    font-size: 1rem;
     color: rgb(0, 0, 0);
+    transition: border-color 0.3s, box-shadow 0.3s;
+
+}
+
+.formulario input:focus {
+    border-color: rgb(255, 187, 0);
+    box-shadow: 0 0 5px rgba(255, 217, 0, 0.5);
 }
 
 .formulario input[type="submit"] {
-    width: 60%;
-    margin: auto;
-    border: solid thin #ff914d;
-    padding: .7rem;
+    width: 50%;
+    display: block;
+    margin: 3rem auto 1rem auto;
+    padding: 0.7rem 1rem;
+    border: 2px solid #ff914d;
     border-radius: 2rem;
-    background-color: #ffde59;
+    background-color: #ff914d;
+    color: #ffffff;
     font-weight: 600;
-    margin-top: 3rem;
-    font-size: .8rem;
+    font-size: 1rem;
+    text-transform: uppercase;
     cursor: pointer;
-    color: #222;
+    transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+    margin-top: 30px;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: #ffc107;
+    border-color: #ffb300;
+}
+
+.formulario input[type="submit"]:active {
+    background-color: #ffb300;
+    border-color: #ffb300;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .sign-in {
