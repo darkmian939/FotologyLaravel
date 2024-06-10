@@ -64,18 +64,18 @@ body {
 
 h2 {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: #333;
     margin-bottom: 1rem;
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    color: #666;
-    margin-bottom: 1.5rem;
+    font-family: 'Roboto', sans-serif; /* Fuente Roboto */
+    font-size: 1rem; /* Tamaño de fuente */
+    font-weight: 400; /* Peso de la fuente */
+    color: #666; /* Color del texto */
+    margin-bottom: 1.5rem; /* Margen inferior */
 }
 
 .custom-button {
@@ -129,7 +129,8 @@ p {
 
 .create-account {
     padding: 2.7rem 0;
-    font-size: 1.7rem;
+    font-size: 1.0rem;
+    margin-bottom: 10px;
 }
 
 .iconos {
