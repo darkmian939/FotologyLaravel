@@ -30,6 +30,7 @@
             <input type="email" name="email" placeholder="Correo electrónico" required>
             <input type="text" name="adress" placeholder="Dirección" required>
             <input type="date" name="birthday" placeholder="Fecha de nacimiento" required>
+            <input type="text" name="description" placeholder="Descripcion" required>
             <input type="password" name="contrasena" placeholder="Contraseña" required>            
             <input type="file" name="foto_perfil" accept="image/*" required>
             <input type="submit" value="Registrarse" name="registrarse">   
