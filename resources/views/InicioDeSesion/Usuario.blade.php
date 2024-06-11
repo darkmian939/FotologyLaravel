@@ -9,11 +9,6 @@
 <body>
 <div class="contenedor-form">
     <div id="usuarioContainer">
-        @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
         <form id="Usuario" action="{{ route('usuario.login') }}" method="POST">
             @csrf
             <div class="header">
@@ -43,6 +38,5 @@
 <script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>
-
 
 

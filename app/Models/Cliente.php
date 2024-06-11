@@ -24,4 +24,7 @@ class Cliente extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    protected $primaryKey = 'IDcliente';
+
 }

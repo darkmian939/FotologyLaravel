@@ -9,16 +9,16 @@
 </head>
 <body>
     <div class="container-form sign-up">
-    <div class="welcome-back">
-    <div class="message">
-        <img src="Recursos/LOGOA.png" alt="Bienvenido a Fotology" class="welcome-image">
-        <h2>Bienvenido a Fotology</h2>
-        <p>Si ya tienes una cuenta, por favor inicia sesión aquí</p>
-        <button class="custom-button">
-            <a href="{{ route('InicioDeSesion.usuario') }}" class="sign-up-btn">Iniciar Sesión</a>
-        </button>
-    </div>
-</div>
+        <div class="welcome-back">
+            <div class="message">
+                <img src="Recursos/LOGOA.png" alt="Bienvenido a Fotology" class="welcome-image">
+                <h2>Bienvenido a Fotology</h2>
+                <p>Si ya tienes una cuenta, por favor inicia sesión aquí</p>
+                <button class="custom-button">
+                    <a href="{{ route('InicioDeSesion.usuario') }}" class="sign-up-btn">Iniciar Sesión</a>
+                </button>
+            </div>
+        </div>
         <form class="formulario" method="POST" action="{{ route('registro.usuario') }}" enctype="multipart/form-data">
             @csrf
             <h2 class="create-account">Crear una cuenta</h2>
@@ -33,7 +33,6 @@
                     <i class='bx bxl-microsoft'></i>
                 </div>
             </div>
-            <p class="cuenta-gratis">Crear una cuenta gratis</p>
             <input type="text" name="nameUser" placeholder="Nombre completo" required>
             <input type="text" name="username" placeholder="Nombre de usuario" required>
             <input type="tel" name="phone" placeholder="Teléfono" required>
@@ -44,13 +43,14 @@
             <h5>Foto de perfil</h5>
             <input type="file" name="image" accept="image/*" required>
             <input type="submit" value="Registrarse" name="registrarse">
-            <br>
+            <!-- Mensaje de éxito -->
             @if (Session::has('success'))
-    <div class="alert alert-success">
-        {{ Session::get('success') }}
-    </div>
-@endif
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                </div>
+            @endif
         </form>
+        <!-- Script -->
         <script src="{{ asset('java.js') }}"></script>
     </div>
 </body>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Cliente;
 
 class PaginaClientesController extends Controller
 {
@@ -25,25 +26,53 @@ class PaginaClientesController extends Controller
     {
         return view('PaginaClientes.contacto');
     }
+
     public function perfilusuario()
+{
+    // Obtener el ID del usuario de la sesión
+    $userId = session('user_id');
+
+    // Buscar al usuario por su ID utilizando la columna 'id'
+    $cliente = Cliente::find($userId);
+
+    // Cargar la vista 'perfilusuario' pasando la variable $cliente
+    return view('PaginaClientes.perfilusuario', compact('cliente'));
+}
+
+    public function editarperfilusuario()
     {
-        return view('PaginaClientes.perfilusuario');
+        // Obtén el ID del usuario de la sesión
+        $userId = session('user_id');
+
+        // Busca al cliente por su ID utilizando la columna 'id'
+        $cliente = Cliente::find($userId);
+
+        // Carga la vista 'editarperfilusuario' pasando la variable $cliente
+        return view('PaginaClientes.editarperfilusuario', compact('cliente'));
     }
 
-    public function store(Request $request)
+    public function updateperfilusuario(Request $request)
     {
-        // Logic to handle the form submission and store the data
-        // Example:
-        // $validatedData = $request->validate([
-        //     'name' => 'required|max:255',
-        //     'email' => 'required|email',
-        //     // other validation rules
-        // ]);
-
-        // Save data to the database
-        // ModelName::create($validatedData);
-
-        return redirect()->route('PaginaClientes.pagina')->with('success', 'Data stored successfully!');
+        $userId = session('user_id');
+        // Buscar el usuario por su ID utilizando la columna 'id'
+        $usuario = Cliente::find($userId);
+        
+        // Verificar si se encontró el usuario antes de actualizar sus detalles
+        if ($usuario) {
+            // Actualizar los detalles del usuario
+            $usuario->nameUser = $request->nameUser;
+            $usuario->phone = $request->phone;
+            // Actualizar otros campos según sea necesario...
+    
+            $usuario->save();
+        } else {
+            // Manejar el caso donde no se encuentra el usuario
+            // Esto puede ocurrir si la sesión no contiene un 'user_id' válido
+            // Puedes redirigir al usuario a una página de error o hacer cualquier otra acción apropiada.
+        }
+        
+        return redirect()->route('PaginaClientes.perfilusuario');
     }
+
 }
 
