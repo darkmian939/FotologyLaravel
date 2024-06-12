@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     max-width: 700px; /* Ancho máximo del contenedor */
-    background-color: #f2f2f2; /* Color de fondo del contenedor */
+    background-color: #dfdcdc; /* Color de fondo del contenedor */
     padding: 10px; /* Espaciado interno del contenedor */
     border-radius: 8px; /* Bordes redondeados del contenedor */
     margin: 0 auto; /* Centrar horizontalmente */
@@ -20,6 +20,20 @@
 body {
     background-color: #dfdcdc;
 }
+.fdestacados {
+    font-size: 20px;
+    text-align: center;
+    color: #14150f;
+    margin-bottom: 5px;
+}
+.linea {
+    width: 50%;
+    margin: 0 auto;
+    border: none; /* Elimina el borde por defecto */
+    height: 5px; /* Altura de la línea */
+    background-color: #ffc403; /* Color de la línea */
+    margin-bottom: 20px; /* Espacio entre la línea y el siguiente elemento */
+}
 
 /* Header */
 .header {
@@ -29,6 +43,44 @@ body {
     align-items: center;
     height: 100%;
     padding: 5px 10%;
+}
+.header2 {
+    width: 100%;
+    height: 500px;
+    background: #a8ff78;  
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(44, 55%, 47%, 0.493), hsla(56, 100%, 61%, 0.541)), url(../../Recursos/foti.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(44, 100%, 51%, 0.582), hsla(56, 100%, 51%, 0.514)), url(../../Recursos/foti.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top left;
+    position: relative;
+    margin-top: -25px;
+}
+.textos-header {
+    text-align: center; /* Centra el contenido */
+    padding: 50px 0; /* Añade un espacio alrededor del contenido */
+    font-family: Arial, sans-serif; /* Utiliza una fuente específica */
+}
+
+.textos-header h1 {
+    font-size: 200px; /* Tamaño del texto del h1 */
+    margin-bottom: -20px; /* Añade un espacio entre el h1 y el h2 */
+    color: #FFF; /* Color del texto */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+}
+
+.textos-header h2 {
+    font-size: 24px; /* Tamaño del texto del h2 */
+    color: #FFF; /* Color del texto */
+}
+.wave{
+    position: absolute;
+    bottom:  0;
+    width:  100%;
+
 }
 
     .header .logo {
@@ -104,16 +156,17 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    margin-top: -70px;
 }
 
     .button:hover {
-        background-color: #0056b3;
+        background-color: #b38300;
     }
 
     
-    .button2 {
+.button2 {
     padding: 8px 16px;
-    background-color: #4CAF50; /* Color verde */
+    background-color: #e3ca28; /* Color verde */
     color: white; /* Texto en blanco */
     border: none;
     border-radius: 4px;
@@ -201,24 +254,6 @@ body {
     color: red;
     display: none;
 }
-
-.smas button {
-    font-weight: 700;
-    color: #ffffff;
-    padding: 8px 25px;
-    background: #ffc403;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-    .smas button:hover {
-        background-color: #cfcfcf;
-        color: #14150f;
-        transform: scale(1.1);
-    }
-
 
 /*menu DESPLEGABLE */
 .dropdown {
@@ -373,20 +408,20 @@ body {
 
                 .opcion {
                     margin-right: 10px; /* Espacio a la derecha del select */
-    flex-grow: 1;
-    font-family: Arial, sans-serif; /* Tipo de fuente */
-    font-size: 16px; /* Tamaño de fuente */
-    color: #333; /* Color del texto */
-    padding: 10px; /* Espaciado interno */
-    border: 1px solid #ccc; /* Borde del select */
-    border-radius: 5px; /* Borde redondeado */
-    appearance: none; /* Eliminar el estilo predeterminado del select */
-    -webkit-appearance: none; /* Para navegadores basados en WebKit */
-    -moz-appearance: none; /* Para navegadores basados en Gecko (Firefox) */
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6"><path fill="%23333" d="M6 6L0 0h12z"/></svg>'); /* Icono de flecha personalizado */
-    background-repeat: no-repeat; /* No repetir la imagen de fondo */
-    background-position: right 2px center; /* Posición del icono de flecha */
-    background-size: 10px; /* Tamaño del icono de flecha */
+                    flex-grow: 1;
+                    font-family: Arial, sans-serif; /* Tipo de fuente */
+                    font-size: 16px; /* Tamaño de fuente */
+                    color: #333; /* Color del texto */
+                    padding: 10px; /* Espaciado interno */
+                    border: 1px solid #ccc; /* Borde del select */
+                    border-radius: 5px; /* Borde redondeado */
+                    appearance: none; /* Eliminar el estilo predeterminado del select */
+                    -webkit-appearance: none; /* Para navegadores basados en WebKit */
+                    -moz-appearance: none; /* Para navegadores basados en Gecko (Firefox) */
+                    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="6" viewBox="0 0 12 6"><path fill="%23333" d="M6 6L0 0h12z"/></svg>'); /* Icono de flecha personalizado */
+                    background-repeat: no-repeat; /* No repetir la imagen de fondo */
+                    background-position: right 2px center; /* Posición del icono de flecha */
+                    background-size: 10px; /* Tamaño del icono de flecha */
 }
 
 .opcion option {
@@ -394,4 +429,11 @@ body {
     font-size: 16px; /* Tamaño de fuente */
     color: #333; /* Color del texto */
     background-color: 'orange'; /* Color de fondo */
+}
+
+option[data-img] {
+    background-size: cover; /* Para cubrir completamente el contenedor */
+    background-position: center; /* Para centrar la imagen */
+    width: 100px; /* Ancho deseado */
+    height: 5px; /* Alto deseado */
 }
