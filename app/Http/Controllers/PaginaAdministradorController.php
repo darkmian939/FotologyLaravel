@@ -31,6 +31,11 @@ class PaginaAdministradorController extends Controller
         return view('PaginaAdministrador.pagadministrador');
     }
 
+    public function Contactos()
+    {
+        return view('PaginaAdministrador.pagadministradorcontactos');
+    }
+
 
 
 }

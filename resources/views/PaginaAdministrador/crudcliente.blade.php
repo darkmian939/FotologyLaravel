@@ -89,7 +89,7 @@
 }
 
     </style>
-    <link rel="stylesheet" href="../css/Administrador css/styleadministrador.css"> <!-- Ajusta la ruta según tu estructura de carpetas y configuración de contenido estático -->
+    <link rel="stylesheet" href="../css/Administrador/styleadministrador.css"> <!-- Ajusta la ruta según tu estructura de carpetas y configuración de contenido estático -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/646ac4fad6.js" crossorigin="anonymous"></script>
     <title>Panel de Administrador</title>
@@ -126,7 +126,7 @@
             <tbody>
                 
                     <tr>
-                        <td>{{ $cliente->IDcliente }}</td>
+                    <td>{{ $cliente->IDcliente }}</td>
                         <td>{{ $cliente->Nombre_cliente }}</td>
                         <td>{{ $cliente->Email }}</td>
                         <td>{{ $cliente->Contraseña }}</td>

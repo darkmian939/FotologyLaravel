@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/Administrador css/stylebienvenida.css">
+    <link rel="stylesheet" href="../../../public/css/Administrador/stylebienvenida.css">
     <title>Panel de Administrador</title>
 </head>
 <header class="header">
@@ -20,6 +20,8 @@
         <div class="buttons">
             <a href="<?php echo route('PaginaAdministrador.crudcliente'); ?>" class="btn">Gestión de Clientes</a>
             <a href="<?php echo route('PaginaAdministrador.pagadministrador'); ?>" class="btn">Gestión de Fotógrafos</a>
+            <a href="<?php echo route('PaginaAdministrador.pagadministradorcontactos'); ?>">Contactos</a></li>
+
         </div>
     </div>
 </body>
