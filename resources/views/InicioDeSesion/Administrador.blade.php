@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="contenedor-form">
-    <form id="Administrador" action="{{ route('PaginaAdministrador.bienvenida') }}" method="POST">
+    <form id="Administrador" action="{{ route('administrador.login') }}" method="POST">
         @csrf
         <div class="header">
             <a class="selected" data-user-type="Administrador">ADMINISTRADOR</a><br><br>
@@ -19,17 +19,6 @@
                 <p class="error">{{ $errors->first() }}</p>
             </div>
         @endif
-        @if ($errors->has('usuario'))
-    <div class="alert alert-danger">
-        <p>{{ $errors->first('usuario') }}</p>
-    </div>
-@endif
-
-@if ($errors->has('contraseña'))
-    <div class="alert alert-danger">
-        <p>{{ $errors->first('contraseña') }}</p>
-    </div>
-@endif
 <div class="fila">
     <label for="Email">Usuario</label>
     <input type="email" id="Email" name="Email" required>

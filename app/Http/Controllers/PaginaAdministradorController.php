@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class PaginaAdministradorController extends Controller
 {
-    public function index()
+    public function bienvenida()
     {
-        return view('InicioDeSesion.administrador');
+        return view('PaginaAdministrador.bienvenida');
     }
 
     public function PaginaAdministrador()

@@ -32,8 +32,7 @@ Route::post('/registrofotografo', [LoginController::class, 'registroFotografo'])
 
 // Inicio sesión administrador
 Route::get('/inicio-de-sesion/administrador', [LoginController::class, 'showAdministradorLoginForm'])->name('InicioDeSesion.administrador');
-Route::post('/inicio-de-sesion/administrador', [LoginController::class, 'administradorLogin'])->name('PaginaAdministrador.bienvenida');
-
+Route::post('/inicio-de-sesion/administrador', [LoginController::class, 'administradorLogin'])->name('administrador.login');
 // Inicio sesion vistas
 Route::get('/pagina', [LoginController::class, 'pagina'])->name('PaginaClientes.pagina');
 Route::get('/recuperar-contraseña', [LoginController::class, 'showRecuperarForm'])->name('InicioDeSesion.recuperar');
@@ -59,6 +58,6 @@ Route::get('/Publicacion', [PaginaFotografosController::class, 'Publicacion'])->
 
 
 // Rutas para la página de administradores
-Route::get('/pagina-administrador', [PaginaAdministradorController::class, 'index'])->name('PaginaAdministrador.index');
+Route::get('/pagina-administrador', [PaginaAdministradorController::class, 'bienvenida'])->name('PaginaAdministrador.bienvenida');
 Route::get('/pagina-administrador/cliente', [PaginaAdministradorController::class, 'Cliente'])->name('PaginaAdministrador.crudcliente');
-Route::get('/pagina-administrador/fotografo', [PaginaAdministradorController::class, 'Fotografo'])->name('PaginaAdministrador.fotografo');
+Route::get('/pagina-administrador/fotografo', [PaginaAdministradorController::class, 'Fotografo'])->name('PaginaAdministrador.pagadministrador');

@@ -89,7 +89,7 @@
             background-color: #f2f2f2;
         }
     </style>
-    <link rel="stylesheet" href="../css/Administrador css/styleadministrador.css"> <!-- Ajusta la ruta según tu estructura de carpetas y configuración de contenido estático -->
+    <link rel="stylesheet" href="{{ asset('css/Administrador css/styleadministrador.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/646ac4fad6.js" crossorigin="anonymous"></script>
     <title>Panel de Administrador</title>
@@ -99,16 +99,16 @@
 
     <header class="header">
         <div class="logo">
-            <img src="Recursos/LOGOA.png" alt="Logo" /> <!-- Ajusta la ruta según tu estructura de carpetas y configuración de contenido estático -->
+            <img src="{{ asset('Recursos/LOGOA.png') }}" alt="Logo">
         </div>
         <nav>
             <ul class="linksnav">
-            <li><a href="<?php echo route('PaginaAdministrador.bienvenida'); ?>" >Inicio</a></li>
+                <li><a href="{{ route('PaginaAdministrador.bienvenida') }}">Inicio</a></li>
             </ul>
         </nav>
-        <a class="btn" href="<?php echo route('InicioDeSesion.administrador'); ?>">
-        <button>Cerrar Sesión</button>
-    </a>
+        <a class="btn" href="{{ route('InicioDeSesion.administrador') }}">
+            <button>Cerrar Sesión</button>
+        </a>
     </header>
 
     <div class="container">
@@ -127,27 +127,24 @@
                 </tr>
             </thead>
             <tbody>
-                
-                    <tr>
-                        <td>{{ $fotografo->IDfotografo }}</td>
-                        <td>{{ $fotografo->Nombre_fotografo }}</td>
-                        <td>{{ $fotografo->Email }}</td>
-                        <td>{{ $fotografo->Contraseña }}</td>
-                        <td>{{ $fotografo->Direccion }}</td>
-                        <td>{{ $fotografo->Telefono }}</td>
-                        <td>
-                            <!-- Formulario para enviar la solicitud de eliminación -->
-                            <form method="post" action="{{ route('EliminarFotografo') }}"> <!-- Ajusta el nombre de la ruta según tu configuración -->
-                                
-                                <input type="hidden" name="eliminar_id" value="{{ $fotografo->IDfotografo }}" />
-                                <button type="submit" class="eliminar-btn">Eliminar</button>
-                            </form>
-                        </td>
-                    </tr>
-                
+                <tr>
+                    <td>{{ $fotografo->IDfotografo }}</td>
+                    <td>{{ $fotografo->Nombre_fotografo }}</td>
+                    <td>{{ $fotografo->Email }}</td>
+                    <td>{{ $fotografo->Contraseña }}</td>
+                    <td>{{ $fotografo->Direccion }}</td>
+                    <td>{{ $fotografo->Telefono }}</td>
+                    <td>
+                        <!-- Formulario para enviar la solicitud de eliminación -->
+                        <form method="post" action="{{ route('EliminarFotografo') }}">
+                            @csrf
+                            <input type="hidden" name="eliminar_id" value="{{ $fotografo->IDfotografo }}" />
+                            <button type="submit" class="eliminar-btn">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
-
 </body>
 </html>
