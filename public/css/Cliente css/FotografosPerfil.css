@@ -1,4 +1,4 @@
-﻿* {
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -6,8 +6,16 @@
 }
 
 body {
-    background-color: #dfdcdc;
-    margin-bottom: -10;
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: dfdcdc;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Header */
@@ -24,15 +32,16 @@ body {
     height: 500px;
     background: #a8ff78;  
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(44, 55%, 47%, 0.493), hsla(56, 100%, 61%, 0.541)), url(../../Recursos/foti.jpg);
+    background: -webkit-linear-gradient(to right, hsla(44, 55%, 47%, 0), hsla(56, 100%, 61%, 0)), url(../../Recursos/foto3.jpg);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(44, 100%, 51%, 0.582), hsla(56, 100%, 51%, 0.514)), url(../../Recursos/foti.jpg);
+    background: linear-gradient(to right, hsla(44, 100%, 51%, 0), hsla(56, 100%, 51%, 0)), url(../../Recursos/foto3.jpg);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
     background-position: top left;
     position: relative;
     margin-top: -25px;
+    background-position-y: 55%;
 }
 .textos-header {
     text-align: center; /* Centra el contenido */
@@ -182,14 +191,19 @@ h1 {
 
 .photographers-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    width: 80%;
-    max-width: 800px;
-    margin: 20px auto;
+    width: 70%;
+    height: 80%;
+    max-width: 100%;
+    margin: 20px 50px;
+    margin-bottom: 20px; /* Agrega margen inferior */
 }
 
 .photographer {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
     position: relative; /* Se añade posicionamiento relativo */
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -197,6 +211,7 @@ h1 {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
+
 }
 
 .photographer:hover {
@@ -207,8 +222,8 @@ h1 {
     width: 100%;
     height: auto;
     border-radius: 50%;
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 250px;
+    max-height: 250px;
     object-fit: cover;
 }
 
@@ -294,4 +309,54 @@ h1 {
 .starability-growRotate input[type="radio"]:checked ~ label:before,
 .starability-growRotate input[type="radio"]:checked ~ label {
     color: #ffcc00;
+}
+
+
+.contenedor {
+    background-color: #ffffff;
+    display: flex;
+    padding: 25px;
+    color: #000000;
+    width: 75%;
+    margin: auto; /* Esto centra horizontalmente el contenedor */
+    border-radius: 50px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    border: 1px solid #a0a0a0; /* Borde */
+    margin-bottom: 2px;
+}
+.top-1 {
+    font-size: 17px; /* Tamaño de la fuente */
+    color: #a8a8a8; /* Color del texto */
+    margin-top: 5px; /* Espacio desde arriba */
+    text-align: right; /* Alineación a la derecha */
+}
+.texto {
+    padding-left: 30px;
+}
+.imagen {
+    width: 150px; /* Nuevo valor para width */
+    border-radius: 125px; /* Ajustado proporcionalmente al nuevo width */
+    height: 150px; /* Nuevo valor para height */
+    float: left;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.boton-categoria {
+    background-color: orange; /* Color de fondo naranja */
+    color: white; /* Color del texto blanco */
+    font-weight: bold; /* Texto en negrita */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor tipo puntero */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    margin-top: 10px; /* Espacio entre la imagen y el botón */
+}
+
+.boton-categoria:hover {
+    background-color: darkorange; /* Cambio de color de fondo al pasar el cursor */
+}
+.photographer-img {
+    width: 100%; /* Tamaño máximo del 100% del contenedor */
+    height: auto; /* Altura automática para mantener la proporción */
+    max-width: 200px; /* Ancho máximo de 200px */
 }

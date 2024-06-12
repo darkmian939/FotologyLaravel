@@ -27,6 +27,12 @@ class PaginaClientesController extends Controller
         return view('PaginaClientes.contacto');
     }
 
+    public function perfildefotografo()
+    {
+        return view('PaginaClientes.perfildefotografo');
+    }
+
+
     public function perfilusuario()
 {
     // Obtener el ID del usuario de la sesión

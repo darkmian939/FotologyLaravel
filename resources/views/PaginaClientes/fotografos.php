@@ -30,12 +30,8 @@
     <br>
 <div class="header2" style="position: relative; z-index: 1;">
 <section class="textos-header">
-            <h1>
-                Fotografos
-            </h1>
-            <h2>
-                Encuentra tu fotografo de preferencia
-            </h2>
+            <h1>Fotografos</h1>
+            <h2> Elige tu fotografo de preferencia para ver sus trabajos </h2>
         </section>
     <div class="wave" style="height: 150px; overflow: hidden; margin-bottom: -20px; z-index: 1;">
     <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%; filter: blur(1px);">
@@ -45,7 +41,7 @@
 </div>
 <center>
 <div class="fdestacados" style="margin-top: 15px; position: relative; z-index: 2;">
-    <h1 style="margin-top: -70px;">Todos los fotografos disponibles</h1>
+    <h1 style="margin-top: -40px; color: #ffc403; font-weight: bold; font-size: 45px;">Todos los fotografos disponibles</h1>
     <hr class="linea"></hr>
 </div>
 
@@ -57,53 +53,71 @@
     </center>
     <div class="photographers-grid" id="photographersGrid">
         <div class="photographer">
-        <span class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        
         <br>
             <img src="Recursos/foto3.jpg" alt="Fotógrafo 1">
+            <span class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
             <h2>Made R</h2>
             <p>Eventos, Moda, Retratos, Alimentos</p>
         </div>
         
         <div class="photographer">
-        <span class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <br>
             <img src="Recursos/foto5.jpg" alt="Fotógrafo 2">
+            <span class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
             <h2>Alexis M.</h2>
             <p>Eventos, Viajes, Retratos, Animales</p>
         </div>
         <div class="photographer">
-        <span class="estrellas">&#9733;&#9733;&#9733;</span>
             <br>
             <img src="Recursos/foto6.jpg" alt="Fotógrafo 3">
+            <span class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
             <h2>Paula B.</h2>
             <p>Eventos</p>
         </div>
         <div class="photographer">
-        <span class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
         <br>
             <img src="Recursos/foto1.jpg" alt="Fotógrafo 4">
+            <span class="estrellas">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
             <h2>Camila S.</h2>
             <p>Eventos, Retratos, Alimentos</p>
         </div>
     </div>
 
     <script>
-        document.getElementById('searchInput').addEventListener('input', function() {
-            let filter = this.value.toLowerCase();
-            let photographers = document.getElementsByClassName('photographer');
+    document.getElementById('searchInput').addEventListener('input', function() {
+        let filter = this.value.toLowerCase();
+        let photographers = document.getElementsByClassName('photographer');
+        
+        for (let i = 0; i < photographers.length; i++) {
+            let photographer = photographers[i];
+            let name = photographer.querySelector('h2').textContent.toLowerCase(); // Cambiado aquí
+            // Deja el resto del código igual
+            let description = photographer.getElementsByTagName('p')[0].textContent.toLowerCase();
             
-            for (let i = 0; i < photographers.length; i++) {
-                let photographer = photographers[i];
-                let name = photographer.getElementsByTagName('h2')[0].textContent.toLowerCase();
-                let description = photographer.getElementsByTagName('p')[0].textContent.toLowerCase();
-                
-                if (name.includes(filter) || description.includes(filter)) {
-                    photographer.style.display = "";
-                } else {
-                    photographer.style.display = "none";
-                }
+            if (name.includes(filter) || description.includes(filter)) {
+                photographer.style.display = "";
+            } else {
+                photographer.style.display = "none";
             }
+        }
+    });
+</script>
+<script>
+    // Función para redirigir al perfil del fotógrafo
+    function redirigirPerfil() {
+        // Redirigir al perfil del fotógrafo
+        window.location.href = "<?php echo route('PaginaClientes.perfildefotografo'); ?>"
+    }
+
+    // Agregar evento de clic a todos los contenedores de fotógrafos
+    let contenedoresFotografos = document.querySelectorAll('.photographer');
+    contenedoresFotografos.forEach(function(contenedor) {
+        contenedor.addEventListener('click', function() {
+            // Redirigir al perfil del fotógrafo
+            redirigirPerfil();
         });
-    </script>
+    });
+</script>
 </body>
 </html>

@@ -29,23 +29,37 @@
         </nav>
 
     </header>
+    <br>
+<div class="header2" style="position: relative; z-index: 1;">
+<section class="textos-header">
+            <h1>Mi portafolio</h1>
+            <h2>Comparte tu trabajo con los demas</h2>
+        </section>
+    <div class="wave" style="height: 150px; overflow: hidden; margin-bottom: -20px; z-index: 1;">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%; filter: blur(1px);">
+    <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #ffff;"></path>
+</svg>
+    </div>
+</div>
 
     <center>
-    <div class="categorias">
-        <h1>Mi Portafolio</h1>
         
-        <button class="button" id="addCategoryBtn">Agregar Categoría</button>
+    <div class="fdestacados" style="margin-top: 15px; position: relative; z-index: 2;">
+    <h1 style="margin-top: -70px;">Crea tus categorias</h1>
+    <hr class="linea"></hr>
+</div>
+</div>
   <p >
   <div class="select-container">
     <label class="select-text" for="category">Selecciona una categoría:</label>
     <select class="opcion" id="category">
         <option disabled selected>- SELECCIONA -</option>
-        <option value="PAISAJES" data-img="https://www.dzoom.org.es/wp-content/uploads/2020/01/falsos-mitos-fotografia-equipo-camara-tripode-estabilidad-734x489.jpg">Paisajes</option>
-        <option value="RETRATOS" data-img="https://www.blogdelfotografo.com/wp-content/uploads/2020/05/retrato-nin%CC%83a.webp">Retratos</option>
-        <option value="MODA" data-img="https://www.blogdelfotografo.com/wp-content/uploads/2023/09/fotografia-moda-portada.webp">Moda</option>
-        <option value="ALIMENTOS" data-img="https://web-images.pixpa.com/wTHX476f8606_30IWBHcHrjqeEi_qAUj407FNTjQGQM/rs:fit:1200:0/q:80/aHR0cHM6Ly9waXhwYWNvbS1pbWcucGl4cGEuY29tL2NvbS9hcnRpY2xlcy8xNTY0NzMxNjk4LTgxNTgxMC1mb29kcGhvdG9ncmFwaHktN2pwZy5qcGc=">Alimentos</option>
-        <option value="VIAJES" data-img="https://i.pinimg.com/originals/14/f6/c3/14f6c3cfb801151a64ede2147020a3e1.jpg">Viajes</option>
-        <option value="EVENTOS" data-img="">Eventos</option>
+        <option value="PAISAJES" data-img="../public/Recursos/paisaje.jpg">Paisajes</option>
+        <option value="RETRATOS" data-img="../public/Recursos/retrato.jpg">Retratos</option>
+        <option value="MODA" data-img="../public/Recursos/moda.jpg">Moda</option>
+        <option value="ALIMENTOS" data-img="../public/Recursos/comidas.jpg">Alimentos</option>
+        <option value="VIAJES" data-img="../public/Recursos/viaje.jpg">Viajes</option>
+        <option value="EVENTOS" data-img="../public/Recursos/evento.jpg">Eventos</option>
     </select>
     <button type="button" class="button2"  style="background-color: green; border: none; padding: 7px;" onclick="crearCategoria()">
 </div>
